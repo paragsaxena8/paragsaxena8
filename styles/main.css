@@ -3,11 +3,6 @@
 ** Table of Contents:                                                                       **
 **********************************************************************************************
 
-Project:    Nafie - HTML Portfolio Template
-Version:    3.0.0
-Created:    04/2021
-Updated:    03/2022
-
 1.  Color Codes
     ------------------------------
     1.  Primary Color
@@ -3376,8 +3371,8 @@ html[dir=rtl] .notifications-container .notify-leave-active {
   mask-image: url("../assets/images/splash.png");
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
+  -webkit-mask-position: bottom;
+  mask-position: bottom;
   -webkit-mask-size: contain;
   mask-size: contain;
 }
@@ -3921,8 +3916,8 @@ html[dir=rtl] .statistics-section .section-content .statistics-items a>.fa {
   mask-image: url("../assets/images/blob-shape.png");
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
+  -webkit-mask-position: bottom;
+  mask-position: bottom;
   -webkit-mask-size: contain;
   mask-size: contain;
 }
@@ -3939,8 +3934,8 @@ html[dir=rtl] .statistics-section .section-content .statistics-items a>.fa {
   mask-image: url("../assets/images/blob-shape.png");
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
+  -webkit-mask-position: bottom;
+  mask-position: bottom;
   -webkit-mask-size: contain;
   mask-size: contain;
 }

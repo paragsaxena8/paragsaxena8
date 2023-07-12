@@ -576,7 +576,7 @@
     data() {
       return {
         // the date my career started (change to yours)
-        careerStartDate: 2020,
+        careerStartDate: 2019,
         // the date copyright started (change to yours)
         copyrightStartDate: 2019,
         // for the template theme
@@ -643,24 +643,24 @@
         //social-accounts
         socialAccounts: [
           {
-            title: 'GitHub',
-            link: 'https://github.com/paragsaxena8',
-            icon: 'fa fa-github'
+            title: "GitHub",
+            link: "https://github.com/paragsaxena8",
+            icon: "fa fa-github",
           },
           {
-            title: 'Twitter',
-            link: 'https://twitter.com/ParagXd',
-            icon: 'fa fa-twitter'
+            title: "Twitter",
+            link: "https://twitter.com/ParagXd",
+            icon: "fa fa-twitter",
           },
           {
-            title: 'LinkedIn',
-            link: 'https://linkedin.com/in/iparagsaxena',
-            icon: 'fa fa-linkedin'
+            title: "LinkedIn",
+            link: "https://linkedin.com/in/iparagsaxena",
+            icon: "fa fa-linkedin",
           },
           {
-            title: 'Instagram',
-            link: 'https://instagram.com/paragps_',
-            icon: 'fa fa-instagram'
+            title: "Instagram",
+            link: "https://instagram.com/paragps_",
+            icon: "fa fa-instagram",
           },
         ],
         // list of skills items to loop through it
@@ -707,7 +707,7 @@
           },
           {
             imgUrl: "../assets/images/tools/npm.png",
-            title: "Npm",
+            title: "NPM",
           },
           {
             imgUrl: "../assets/images/tools/command.png",
@@ -799,7 +799,7 @@
           {
             id: 1,
             url: "https://paragsaxena8.github.io/smart-space-ui/",
-            imgUrl: "../assets/images/portfolio/default.png",
+            imgUrl: "../assets/images/portfolio/11.png",
             title: {
               en: "Smart Space",
             },
@@ -811,7 +811,7 @@
             },
             category: "Angular",
             tools: [],
-            screenshots: {}
+            screenshots: {},
           },
           {
             id: 2,
@@ -833,7 +833,7 @@
           {
             id: 3,
             url: "https://github.com/paragsaxena8/Rakshak",
-            imgUrl: "../assets/images/portfolio/default.png",
+            imgUrl: "../assets/images/portfolio/10.png",
             title: {
               en: "Rakshak - A Web App Vulnerability Testing Tool",
             },
@@ -1061,25 +1061,17 @@
             const res = data.items; //This is an array with the content. No feed, no info about author etc..
             const posts = res.filter((item) => item.categories.length > 0);
             // Put things in right spots of markup
-            let output = `
-             <li>
-                <div class="text-box-inline">
-                  <span class="subtitle">my blogs</span>
-                  <h2>
-                    My Blogs
-                  </h2>
-                  <p>
-                  I occasionally write blogs about technology, productivity, or any topic which found fascinating to me 😀
-                  </p>
-                </div>
-              </li>`;
+            let output = "";
             posts.forEach((blogpost) => {
               output += `
                 <li class="portfolio-item">
                   <a href="${blogpost.guid}" target="_blank" rel="noopener">
                     <div class="item-img">
-                      <img class="portfolio-img" src="${blogpost.thumbnail}" alt="${blogpost.guid}">
+                      <img class="portfolio-img" src="${blogpost.thumbnail}" alt="${blogpost.guid}" >
                     </div>
+                    <p class="list-group-item text-info" >
+                      ${blogpost.title}
+                    </p>
                     <div class="item-details">
                       <h3 class="title">${blogpost.title}</h3>
                       <div class="date">${blogpost.pubDate}</div>
