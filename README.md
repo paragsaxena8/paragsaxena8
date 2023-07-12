@@ -1,9 +1,9 @@
 ### Hi there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="29px">
 ## 🚀 About Me
 
-🧑 I am Parag Saxena, a **UI Developer** (specializing in **Front End Web Development**) Working at Ace Analytics 👨‍💻. 
+🧑 I am Parag Saxena, a **UI Developer** (specializing in **Front End Web Development**) Working as Product Development Engineer 👨‍💻.
 
-🔭 I’m currently working 💻 with Angular Framework ❤ and am really enthusiastic about learning new technology. 
+🔭 I’m currently working 💻 with Angular Framework ❤ and am really enthusiastic about learning new technology.
 
 🌱 I Love to Worked with Angular, Progress Web Apps **PWA** , Playing with API's, JS Frameworks.
 
