@@ -601,37 +601,37 @@
         // list of nav links to loop through it
         navLinks: [
           {
-            url: "#hero",
+            url: "index.html#hero",
             title: {
               en: "Home",
             },
           },
           {
-            url: "#about",
+            url: "index.html#about",
             title: {
               en: "About",
             },
           },
           {
-            url: "#skills",
+            url: "index.html#skills",
             title: {
               en: "Skills",
             },
           },
           {
-            url: "#portfolio",
+            url: "index.html#portfolio",
             title: {
               en: "Portfolio",
             },
           },
           {
-            url: "#blog",
+            url: "index.html#blogs",
             title: {
               en: "Blogs",
             },
           },
           {
-            url: "#contact",
+            url: "index.html#contact",
             title: {
               en: "Contact",
             },
@@ -798,7 +798,7 @@
         allPortfolioItems: [
           {
             id: 1,
-            url: "https://paragsaxena8.github.io/smart-space-ui/",
+            url: "https://github.com/paragsaxena8/smart-space-ui",
             imgUrl: "../assets/images/portfolio/11.png",
             title: {
               en: "Smart Space",
@@ -866,7 +866,7 @@
           },
           {
             id: 5,
-            url: "",
+            url: "single-portfolio.html?id=5",
             imgUrl: "../assets/images/portfolio/5.png",
             title: {
               en: "UI/UX Templates",
@@ -875,27 +875,33 @@
               en: "March 2019",
             },
             desc: {
-              en: "UI/UX Template design with Adobe XD",
+              en: "UI/UX Template designs with Adobe XD",
             },
             category: "UX",
             tools: ["UX", "Adobe XD"],
             screenshots: {
               img1: {
-                url: "https://via.placeholder.com/355x200",
+                url: "../assets/images/portfolio/2.png",
                 caption: {
-                  en: "caption 5",
+                  en: "UX Design of Yoga Webpage design",
                 },
               },
               img2: {
-                url: "https://via.placeholder.com/355x200",
+                url: "../assets/images/portfolio/3.png",
                 caption: {
-                  en: "caption 5",
+                  en: "UX Banner Design for cyber security workshop",
                 },
               },
               img3: {
-                url: "https://via.placeholder.com/355x200",
+                url: "../assets/images/portfolio/6.png",
                 caption: {
-                  en: "caption 5",
+                  en: "UX Planet Observation webpage design",
+                },
+              },
+              img4: {
+                url: "../assets/images/portfolio/12.png",
+                caption: {
+                  en: "UX Online Cake booking webpage design",
                 },
               },
             },
@@ -1054,16 +1060,19 @@
       allBlogPosts() {
         let url =
           "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@paragXd";
+        let blogposts = document.querySelector("#blogpost");
+        let postsCount = document.querySelector("#postCount");
 
-        fetch(url)
-          .then((res) => res.json())
-          .then((data) => {
-            const res = data.items; //This is an array with the content. No feed, no info about author etc..
-            const posts = res.filter((item) => item.categories.length > 0);
-            // Put things in right spots of markup
-            let output = "";
-            posts.forEach((blogpost) => {
-              output += `
+        if (blogposts) {
+          fetch(url)
+            .then((res) => res.json())
+            .then((data) => {
+              const res = data.items; //This is an array with the content. No feed, no info about author etc..
+              const posts = res.filter((item) => item.categories.length > 0);
+              // Put things in right spots of markup
+              let output = "";
+              posts.forEach((blogpost) => {
+                output += `
                 <li class="portfolio-item">
                   <a href="${blogpost.guid}" target="_blank" rel="noopener">
                     <div class="item-img">
@@ -1078,10 +1087,11 @@
                     </div>
                   </a>
                 </li>`;
+              });
+              blogposts.innerHTML = output;
+              postsCount.innerText = `${posts.length}+`;
             });
-            document.querySelector("#blogpost").innerHTML = output;
-            document.querySelector("#postCount").innerText = `${posts.length}+`;
-          });
+        }
       },
 
       // get a theme to use
