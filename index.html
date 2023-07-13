@@ -211,7 +211,8 @@
                   is confident that he can help you create a website that is both visually appealing and user-friendly.
                 </p>
                 <div class="btns-container">
-                  <a download href="./assets/files/cv.pdf" class="btn btn-outline-light">Download CV</a>
+                  <a download href="https://drive.google.com/file/d/1KGMqFWmhEjDnVuo0-CMvvy6TC03XSYB5/view?usp=sharing"
+                    class="btn btn-outline-light">Download CV</a>
                 </div>
               </div>
             </div>
@@ -299,7 +300,9 @@
                       <div class="ultimate-tooltip">
                         <h4 class="ultimate-tooltip-title">{{ item.companyName.en }}</h4>
                         <h5 class="ultimate-tooltip-subtitle">{{ item.jobTitle.en }}</h5>
+                        [<span class="small">{{item.period}}</span>]
                         <p>{{ item.desc.en }}</p>
+
                       </div>
                       <div class="ultimate-tooltip-arrow"></div>
                     </template>
@@ -365,9 +368,9 @@
                   <div class="item-img">
                     <img class="portfolio-img" :src="work.imgUrl" :alt="work.title.en">
                   </div>
-                  <div class="list-group-item text-info">
+                  <!-- <div class="list-group-item text-info">
                     {{ work.title.en }}
-                  </div>
+                  </div> -->
                   <div class="item-details">
                     <h3 class="title">{{ work.title.en }}</h3>
                     <div class="date">{{ work.date.en }}</div>

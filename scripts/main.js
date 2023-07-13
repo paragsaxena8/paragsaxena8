@@ -601,37 +601,37 @@
         // list of nav links to loop through it
         navLinks: [
           {
-            url: "index.html#hero",
+            url: "#hero",
             title: {
               en: "Home",
             },
           },
           {
-            url: "index.html#about",
+            url: "#about",
             title: {
               en: "About",
             },
           },
           {
-            url: "index.html#skills",
+            url: "#skills",
             title: {
               en: "Skills",
             },
           },
           {
-            url: "index.html#portfolio",
+            url: "#portfolio",
             title: {
               en: "Portfolio",
             },
           },
           {
-            url: "index.html#blogs",
+            url: "#blogs",
             title: {
               en: "Blogs",
             },
           },
           {
-            url: "index.html#contact",
+            url: "#contact",
             title: {
               en: "Contact",
             },
@@ -726,6 +726,7 @@
         experienceItems: [
           {
             date: "2019",
+            period: "05/2019 - 08/2019",
             companyName: {
               en: "Get Popularity",
             },
@@ -738,6 +739,7 @@
           },
           {
             date: "2020",
+            period: "01/2020 - 08/2020",
             companyName: {
               en: "Confluxsys",
             },
@@ -750,6 +752,7 @@
           },
           {
             date: "2021",
+            period: "08/2020 - Present",
             companyName: {
               en: "Ace Analytics",
             },
@@ -760,37 +763,13 @@
               en: "Responsibilities include frontend development using Angular, JavaScript, and CSS.",
             },
           },
-          {
-            date: "2022",
-            companyName: {
-              en: "Ace Analytics",
-            },
-            jobTitle: {
-              en: "Product Developmenet Engineer",
-            },
-            desc: {
-              en: "Managing the development and design of company products.",
-            },
-          },
-          {
-            date: "2023",
-            companyName: {
-              en: "Ace Analytics",
-            },
-            jobTitle: {
-              en: "Product Developmenet Engineer",
-            },
-            desc: {
-              en: "Manage tasks and assist team members with my experience.",
-            },
-          },
         ],
         // current page of portfolio items
         portfolioItemsPage: 3,
         // portfolio items per page
         itemsPerPage: 6,
         // portfolio items filter by type
-        filters: ["All", "HTML", "Angular", "UX"],
+        filters: ["All", "HTML", "Angular"],
         currentFilter: "All",
         // portfolio archive name
         portfolioArchiveName: "",
@@ -799,7 +778,7 @@
           {
             id: 1,
             url: "https://github.com/paragsaxena8/smart-space-ui",
-            imgUrl: "../assets/images/portfolio/11.png",
+            imgUrl: "../assets/images/portfolio/5.png",
             title: {
               en: "Smart Space",
             },
@@ -816,7 +795,7 @@
           {
             id: 2,
             url: "https://paragsaxena8.github.io/coVaccinate/",
-            imgUrl: "../assets/images/portfolio/9.png",
+            imgUrl: "../assets/images/portfolio/3.png",
             title: {
               en: "Co-Vaccinate",
             },
@@ -833,7 +812,7 @@
           {
             id: 3,
             url: "https://github.com/paragsaxena8/Rakshak",
-            imgUrl: "../assets/images/portfolio/10.png",
+            imgUrl: "../assets/images/portfolio/4.png",
             title: {
               en: "Rakshak - A Web App Vulnerability Testing Tool",
             },
@@ -850,7 +829,7 @@
           {
             id: 4,
             url: "http://lovesurprises.in",
-            imgUrl: "../assets/images/portfolio/4.png",
+            imgUrl: "../assets/images/portfolio/2.png",
             title: {
               en: "Love Surprises",
             },
@@ -863,48 +842,6 @@
             category: "HTML",
             tools: ["HTML", "CSS", "JavaScript", "jQuery"],
             screenshots: {},
-          },
-          {
-            id: 5,
-            url: "single-portfolio.html?id=5",
-            imgUrl: "../assets/images/portfolio/5.png",
-            title: {
-              en: "UI/UX Templates",
-            },
-            date: {
-              en: "March 2019",
-            },
-            desc: {
-              en: "UI/UX Template designs with Adobe XD",
-            },
-            category: "UX",
-            tools: ["UX", "Adobe XD"],
-            screenshots: {
-              img1: {
-                url: "../assets/images/portfolio/2.png",
-                caption: {
-                  en: "UX Design of Yoga Webpage design",
-                },
-              },
-              img2: {
-                url: "../assets/images/portfolio/3.png",
-                caption: {
-                  en: "UX Banner Design for cyber security workshop",
-                },
-              },
-              img3: {
-                url: "../assets/images/portfolio/6.png",
-                caption: {
-                  en: "UX Planet Observation webpage design",
-                },
-              },
-              img4: {
-                url: "../assets/images/portfolio/12.png",
-                caption: {
-                  en: "UX Online Cake booking webpage design",
-                },
-              },
-            },
           },
           {
             id: 6,
@@ -1078,9 +1015,6 @@
                     <div class="item-img">
                       <img class="portfolio-img" src="${blogpost.thumbnail}" alt="${blogpost.guid}" >
                     </div>
-                    <p class="list-group-item text-info" >
-                      ${blogpost.title}
-                    </p>
                     <div class="item-details">
                       <h3 class="title">${blogpost.title}</h3>
                       <div class="date">${blogpost.pubDate}</div>
