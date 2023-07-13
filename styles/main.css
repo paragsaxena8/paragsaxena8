@@ -1185,7 +1185,7 @@ p {
 
 @media (max-width: 767px) {
   .btns-container>* {
-    width: auto;
+    width: 100%;
   }
 }
 
@@ -3534,7 +3534,6 @@ html[dir=rtl] .notifications-container .notify-leave-active {
 @media (max-width: 991px) {
   .hero-section .hero-text {
     width: 90vw;
-    margin: 1rem;
   }
 }
 
@@ -3765,7 +3764,7 @@ html[dir=rtl] .hero-section .scroll-down:after {
     display: grid;
     place-content: center;
     padding-top: 80px;
-    padding-bottom: 0;
+    padding-bottom: 80px;
   }
 }
 
