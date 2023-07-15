@@ -844,7 +844,7 @@
             screenshots: {},
           },
           {
-            id: 6,
+            id: 5,
             url: "https://mahamudrafarms.com",
             imgUrl: "../assets/images/portfolio/1.png",
             title: {
@@ -860,7 +860,41 @@
             tools: ["UI", "HTML", "CSS", "PHP"],
             screenshots: {},
           },
-        ],
+          {
+            id: 6,
+            url: "http://nightingaleconsultancy.com/",
+            imgUrl: "../assets/images/portfolio/6.png",
+            title: {
+              en: "Nightingale consultancy",
+            },
+            date: {
+              en: "May 2023",
+            },
+            desc: {
+              en: "A Job recuritment portal based on UK",
+            },
+            category: "HTML",
+            tools: ["UI", "HTML", "CSS", "PHP"],
+            screenshots: {},
+          },
+          {
+            id: 7,
+            url: "https://www.behance.net/gallery/175372191/UIUX-Design",
+            imgUrl: "../assets/images/portfolio/7.png",
+            title: {
+              en: "UI/UX Design",
+            },
+            date: {
+              en: "May 2023",
+            },
+            desc: {
+              en: "A Job recuritment portal based on UK",
+            },
+            category: "UX",
+            tools: ["UX", "Adobe XD"],
+            screenshots: {},
+          },
+        ].reverse(),
         // viewed portfolio items
         portfolioItems: [],
         // list of testimonials items to loop through it
@@ -1010,7 +1044,7 @@
               let output = "";
               posts.forEach((blogpost) => {
                 output += `
-                <li class="portfolio-item">
+                <li class="portfolio-item mb-4">
                   <a href="${blogpost.guid}" target="_blank" rel="noopener">
                     <div class="item-img">
                       <img class="portfolio-img" src="${blogpost.thumbnail}" alt="${blogpost.guid}" >
