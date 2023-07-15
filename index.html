@@ -105,7 +105,7 @@
       <div id="hero" class="hero-section hide-in-preloading" data-paneffect="true" ref="heroSection">
         <div class="hero-img">
           <div class="layer" v-clone>
-            <img src="./assets/images/hero.png" alt="User Name">
+            <img src="./assets/images/hero.png" loading="lazy" alt="hero_image">
           </div>
         </div>
 
@@ -189,7 +189,7 @@
             <!-- about image -->
             <div class="about-img col-lg-6">
               <div class="layer" v-clone>
-                <img src="./assets/images/about.png" alt="User Name">
+                <img src="./assets/images/about.png" loading="lazy" alt="about_parag">
               </div>
             </div>
 
@@ -366,7 +366,7 @@
               <li class="portfolio-item" v-for="work in filteredPortfolioItems" :key="work.title.en">
                 <a :href="work.url" target="_blank" rel="noopener">
                   <div class="item-img">
-                    <img class="portfolio-img" :src="work.imgUrl" :alt="work.title.en">
+                    <img loading="lazy" class="portfolio-img" :src="work.imgUrl" :alt="work.title.en">
                   </div>
                   <!-- <div class="list-group-item text-info">
                     {{ work.title.en }}

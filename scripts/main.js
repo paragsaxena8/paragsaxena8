@@ -1047,7 +1047,7 @@
                 <li class="portfolio-item mb-4">
                   <a href="${blogpost.guid}" target="_blank" rel="noopener">
                     <div class="item-img">
-                      <img class="portfolio-img" src="${blogpost.thumbnail}" alt="${blogpost.guid}" >
+                      <img class="portfolio-img" loading="lazy" src="${blogpost.thumbnail}" alt="${blogpost.guid}" >
                     </div>
                     <div class="item-details">
                       <h3 class="title">${blogpost.title}</h3>
