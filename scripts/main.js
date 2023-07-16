@@ -1308,7 +1308,7 @@
       contactFormValidation() {
         // contact form
         const contactForm = this.$refs.contactForm; // form controls
-
+        const form = document.querySelector("#contactForm");
         const name = contactForm.querySelector('input[name="name"]');
         const email = contactForm.querySelector('input[name="email"]');
         const phone = contactForm.querySelector('input[name="phone"]');
@@ -1495,39 +1495,42 @@
         !Object.values(errors).some((control) =>
           Object.values(control).some(Boolean)
         );
+        form.addEventListener("submit", this.sendContactFormMessage);
       },
 
       // send message from contact form
       sendContactFormMessage(form) {
-        const url = form.getAttribute("action");
-        const formData = new FormData(form); // start loading spinner
-
+        form.preventDefault();
+        const url = "https://formspree.io/f/xnqknazp";
+        const formData = new FormData(form.target); // start loading spinner
         this.startLoading(); // send post request
 
         fetch(url, {
           method: "POST",
           body: formData,
+          headers: {
+            Accept: "application/json",
+          },
         })
-          .then((res) => res.text())
           .then((data) => {
-            if (data === "success") {
+            if (data.ok) {
               // show success message
               this.setNotify({
                 className: "success",
-                msg: form.getAttribute("data-success-msg"),
+                msg: form.target.getAttribute("data-success-msg"),
                 time: 5000,
               }); // reset all form inputs
 
-              form.reset(); // remove inputs valid classes
+              form.target.reset(); // remove inputs valid classes
 
-              form
+              form.target
                 .querySelectorAll(".valid")
                 .forEach((el) => el.classList.remove("valid"));
-            } else if (data === "error") {
+            } else {
               // show error message
               this.setNotify({
                 className: "danger",
-                msg: form.getAttribute("data-err-msg"),
+                msg: form.target.getAttribute("data-err-msg"),
                 time: 5000,
               });
             } // end loading spinner

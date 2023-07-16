@@ -499,8 +499,7 @@
 
             <!-- contact form -->
             <div class="col-lg-6">
-              <form ref="contactForm" class="contact-form form-styled" action="https://formspree.io/f/xknlnkon"
-                method="POST" data-success-msg="Message sent successfully!"
+              <form ref="contactForm" id="contactForm" class="contact-form form-styled" data-success-msg="Message sent successfully!"
                 data-err-msg="Oops! something went wrong, please try again.">
                 <div class="group">
                   <label>Name</label>
@@ -555,7 +554,7 @@
                 </div>
                 <div class="group">
                   <div class="control">
-                    <button class="submit-btn btn btn-dark" type="submit" @click="contactFormValidation">Send</button>
+                    <button type="submit" class="submit-btn btn btn-dark" @click="contactFormValidation">Send</button>
                   </div>
                 </div>
               </form>
