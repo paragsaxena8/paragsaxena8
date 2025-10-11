@@ -1,57 +1,51 @@
 ### Hi there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="29px">
-## 🚀 About Me
 
-🧑 I am Parag Saxena, a **UI Developer** (specializing in **Front End Web Development**) Working as Product Development Engineer 👨‍💻.
+I'm Parag Saxena, a Senior Software Engineer specializing in creating dynamic and user-friendly front-end experiences.
 
-🔭 I’m currently working 💻 with Angular Framework ❤ and am really enthusiastic about learning new technology.
+- 🔭 I’m currently building awesome web applications using **Angular** & **Node.js**.
+- 📚 Beyond the code, I'm passionate about personal development and financial literacy. Some of my favorite reads are *Atomic Habits*, *Hooked*, and *Start with Why*.
+- 💬 Ask me about front-end development, application architecture, or book recommendations!
 
-🌱 I Love to Worked with Angular, Progress Web Apps **PWA** , Playing with API's, JS Frameworks.
+---
 
-📚 I love reading books on **personal development** & **financial literacy**. My Favorites are Atomic Habits, Hooked By Nir Eyal & Start with Why.
+### 🛠️ Tech Stack
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
-## Projects
-[![portfolio](https://img.shields.io/badge/Love_Suprises-007fff?style=for-the-badge&logo=Google-chrome&logoColor=white)](https://lovesurprises.in/)
-[![portfolio](https://img.shields.io/badge/MahaMudra_Farms-007fff?style=for-the-badge&logo=Google-chrome&logoColor=white)](https://mahamudrafarms.com/)
-[![portfolio](https://img.shields.io/badge/Tour_With_Sagar-007fff?style=for-the-badge&logo=Google-chrome&logoColor=white)](https://tourwithsagar.in/)
-[![portfolio](https://img.shields.io/badge/Rakshak-007fff?style=for-the-badge&logo=Google-chrome&logoColor=white)](https://github.com/paragsaxena8/rakshak)
-[![portfolio](https://img.shields.io/badge/Portfolio-007fff?style=for-the-badge&logo=Google-chrome&logoColor=white)](https://iparagsaxena.in/)
+---
 
+### 🚀 My Projects
 
-## 📈 Stats
+| Project | Description | Link |
+|---|---|---|
+| **MahaMudra Farms** | An e-commerce platform for an organic farming initiative. | [![Live](https://img.shields.io/badge/Live-007fff?style=for-the-badge&logo=Google-chrome&logoColor=white)](https://mahamudrafarms.com/) |
+| **Rakshak** | A web application designed for [**add a brief, one-line description here**]. | [![GitHub](https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/paragsaxena8/rakshak) |
+| **Portfolio** | My personal portfolio website showcasing my work and skills. | [![Live](https://img.shields.io/badge/Live-007fff?style=for-the-badge&logo=Google-chrome&logoColor=white)](https://iparagsaxena.in/) |
+
+---
+
+### 📈 My GitHub Stats
 
 <div align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=paragsaxena8&show_icons=true&hide_border=true" alt="Parag Saxena's GitHub Stats">
+  <img src="https://github-readme-stats.vercel.app/api?username=paragsaxena8&show_icons=true&hide_border=true&theme=tokyonight" alt="Parag Saxena's GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=paragsaxena8&layout=compact&hide_border=true&theme=tokyonight" alt="Top Languages" />
 </div>
 
 <div align="center">
-<img src="https://visitor-badge.laobi.icu/badge?page_id=paragsaxena8.paragsaxena8" alt="visitors">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=paragsaxena8.paragsaxena8" alt="visitors">
 </div>
 
-## Languages
-![Angular](https://img.shields.io/badge/Angular-323330?style=for-the-badge&logo=Angular&logoColor=D32F2F)
-![javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
-![typescript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+---
 
-## 🔗 Links
+### 🔗 Connect with me
+
 [![portfolio](https://img.shields.io/badge/Portfolio-5340ff?style=for-the-badge&logo=Google-chrome&logoColor=white)](https://iparagsaxena.in/)
-[![blog](https://img.shields.io/badge/Blog-5340ff?style=for-the-badge&logo=Medium&logoColor=black)](https://paragxd.medium.com/)
+[![blog](https://img.shields.io/badge/Blog-5340ff?style=for-the-badge&logo=Medium&logoColor=white)](https://paragxd.medium.com/)
 [![resume](https://img.shields.io/badge/Resume-4285F4?style=for-the-badge&logo=read-the-docs&logoColor=white)](http://iparagsaxena.in/assets/files/cv.pdf)
-[![linked-in](https://img.shields.io/badge/Linked_In-0077B5?style=for-the-badge&logo=LinkedIn&logoColor=white)](https://www.linkedin.com/in/paragxd/)
-[![github](https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/paragsaxena8)
-[![gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=Gmail&logoColor=white)](mailto:saxenaparag8@gmail.com)
-[![instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/paraghp/)
-
-<!--
-**paragsaxena8/paragsaxena8** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+[![linked-in](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=LinkedIn&logoColor=white)](https://www.linkedin.com/in/paragxd/)
+[![github](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/paragsaxena8)
