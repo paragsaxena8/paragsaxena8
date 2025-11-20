@@ -1,0 +1,72 @@
+/* Layout + spacing tokens shared across themes */
+:root {
+  --space-xxs: clamp(0.25rem, 0.4vw, 0.5rem);
+  --space-xs: clamp(0.5rem, 0.6vw, 0.75rem);
+  --space-sm: clamp(0.75rem, 0.8vw, 1rem);
+  --space-md: clamp(1rem, 1vw, 1.5rem);
+  --space-lg: clamp(1.5rem, 1.6vw, 2rem);
+  --space-xl: clamp(2rem, 3vw, 3rem);
+  --space-2xl: clamp(3rem, 4vw, 4.5rem);
+  --radius-card: clamp(0.75rem, 1vw, 1.25rem);
+  --border-thick: 3px;
+}
+
+.section .container {
+  max-width: min(1200px, 100%);
+}
+
+.section .section-content {
+  width: 100%;
+}
+
+.section .section-content.split {
+  display: grid;
+  gap: var(--space-xl);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: center;
+}
+
+.section .section-content.split.reverse .media-pane {
+  order: 2;
+}
+
+@media (max-width: 991px) {
+  .section .section-content.split.reverse .media-pane {
+    order: initial;
+  }
+}
+
+.media-pane,
+.text-pane {
+  position: relative;
+}
+
+.stats-grid {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.statistics-section .statistics-items li a {
+  min-height: 160px;
+}
+
+
+.contact-form-pane {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form {
+  width: min(480px, 100%);
+}
+
+.hero-section .hero-text h2 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.05;
+}
+
+.statistics-section .section-content .statistics-items a {
+  padding: var(--space-md);
+}
+

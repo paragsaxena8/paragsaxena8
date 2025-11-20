@@ -1,0 +1,831 @@
+/* Neo-brutalist effects applied to both light and dark themes */
+
+/* Grid pattern background for both themes */
+.light_theme #app-inner,
+.dark_theme #app-inner {
+  position: relative;
+}
+
+.light_theme #app-inner:after,
+.dark_theme #app-inner:after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.02) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.dark_theme #app-inner:after {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+/* Typography - Bold and impactful */
+.light_theme h1,
+.light_theme h2,
+.light_theme h3,
+.light_theme h4,
+.light_theme h5,
+.light_theme h6,
+.dark_theme h1,
+.dark_theme h2,
+.dark_theme h3,
+.dark_theme h4,
+.dark_theme h5,
+.dark_theme h6 {
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.light_theme .section .text-box-inline .subtitle,
+.dark_theme .section .text-box-inline .subtitle {
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+/* Buttons - Thick borders and bold shadows */
+.light_theme .btn,
+.dark_theme .btn {
+  border: var(--brutal-border-width) solid hsl(var(--t-color-one));
+  border-radius: 0;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  box-shadow: var(--brutal-shadow-offset) var(--brutal-shadow-offset) 0 var(--brutal-shadow-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.light_theme .btn:hover,
+.dark_theme .btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: calc(var(--brutal-shadow-offset) + 2px) calc(var(--brutal-shadow-offset) + 2px) 0 var(--brutal-shadow-color);
+}
+
+.light_theme .btn:active,
+.dark_theme .btn:active {
+  transform: translate(0, 0);
+  box-shadow: 2px 2px 0 var(--brutal-shadow-color);
+}
+
+/* Cards and containers - Bold borders and shadows */
+.light_theme header,
+.light_theme footer,
+.light_theme .statistics-section .statistics-items li a,
+.light_theme .contact-form,
+.light_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item,
+.dark_theme header,
+.dark_theme footer,
+.dark_theme .statistics-section .statistics-items li a,
+.dark_theme .contact-form,
+.dark_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item {
+  border: var(--brutal-border-width) solid hsl(var(--border-color));
+  border-radius: 0;
+  box-shadow: var(--brutal-shadow-offset) var(--brutal-shadow-offset) 0 var(--brutal-shadow-color);
+}
+
+/* Header and footer specific styling */
+.light_theme header,
+.dark_theme header {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  box-shadow: 0 var(--brutal-shadow-offset) 0 var(--brutal-shadow-color);
+}
+
+.light_theme footer,
+.dark_theme footer {
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  box-shadow: 0 calc(-1 * var(--brutal-shadow-offset)) 0 var(--brutal-shadow-color);
+}
+
+/* Form inputs - Bold styling */
+.light_theme .form-styled .group .control input:not([type=radio]):not([type=checkbox]):not([type=file]),
+.light_theme .form-styled .group .control textarea,
+.dark_theme .form-styled .group .control input:not([type=radio]):not([type=checkbox]):not([type=file]),
+.dark_theme .form-styled .group .control textarea {
+  border: var(--brutal-border-width) solid hsl(var(--border-color));
+  border-radius: 0;
+  font-weight: 600;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.light_theme .form-styled .group .control input:not([type=radio]):not([type=checkbox]):not([type=file]):focus,
+.light_theme .form-styled .group .control textarea:focus,
+.dark_theme .form-styled .group .control input:not([type=radio]):not([type=checkbox]):not([type=file]):focus,
+.dark_theme .form-styled .group .control textarea:focus {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* Toggle switch - Bold styling */
+.light_theme .toggle-switch-btn,
+.dark_theme .toggle-switch-btn {
+  border: var(--brutal-border-width) solid hsl(var(--border-color));
+  border-radius: 0;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Skills items - Bold cards */
+.light_theme .skills-section .section-content .skills-items li,
+.dark_theme .skills-section .section-content .skills-items li {
+  border: var(--brutal-border-width) solid hsl(var(--border-color));
+  border-radius: 0;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.light_theme .skills-section .section-content .skills-items li:hover,
+.dark_theme .skills-section .section-content .skills-items li:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* Experience timeline items */
+.light_theme .experience-section .section-content .experience-timeline .timeline-items li,
+.dark_theme .experience-section .section-content .experience-timeline .timeline-items li {
+  border: var(--brutal-border-width) solid hsl(var(--border-color));
+  border-radius: 0;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.dark_theme .experience-section .section-content .experience-timeline .timeline-items li {
+  border-color: hsl(var(--main-color-one));
+  box-shadow: 4px 4px 0 rgba(0, 255, 100, 0.3);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.dark_theme .experience-section .section-content .experience-timeline .timeline-items li:hover {
+  transform: scale(1.1) rotate(-1deg);
+  border-color: hsl(180, 100%, 50%);
+  box-shadow: 6px 6px 0 rgba(0, 255, 255, 0.3);
+}
+
+/* Portfolio items */
+.light_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item a,
+.dark_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item a {
+  border-radius: 0;
+}
+
+/* Contact info items */
+.light_theme .contact-section .section-content .contact-text .contact-info>li,
+.dark_theme .contact-section .section-content .contact-text .contact-info>li {
+  border-left: var(--brutal-border-width) solid hsl(var(--main-color-one));
+  padding-left: var(--space-md);
+}
+
+.dark_theme .contact-section .section-content .contact-text .contact-info>li:nth-child(1) {
+  border-left-color: hsl(120, 100%, 50%);
+}
+
+.dark_theme .contact-section .section-content .contact-text .contact-info>li:nth-child(2) {
+  border-left-color: hsl(180, 100%, 50%);
+}
+
+.dark_theme .contact-section .section-content .contact-text .contact-info>li:hover {
+  animation: contactBounce 0.4s ease-in-out;
+  transform: translateX(4px);
+}
+
+@keyframes contactBounce {
+  0%, 100% { transform: translateX(4px); }
+  50% { transform: translateX(8px); }
+}
+
+/* Social icons */
+.light_theme .contact-section .section-content .contact-text .social li a,
+.light_theme .hero-section .social ul li a,
+.dark_theme .contact-section .section-content .contact-text .social li a,
+.dark_theme .hero-section .social ul li a {
+  border: var(--brutal-border-width) solid hsl(var(--border-color));
+  border-radius: 0;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.light_theme .contact-section .section-content .contact-text .social li a:hover,
+.light_theme .hero-section .social ul li a:hover,
+.dark_theme .contact-section .section-content .contact-text .social li a:hover,
+.dark_theme .hero-section .social ul li a:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* Scroll to top button */
+.light_theme .scroll-to-top,
+.dark_theme .scroll-to-top {
+  border: var(--brutal-border-width) solid hsl(var(--primary-color));
+  border-radius: 0;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Theme switcher button - Override rounded styles with brutalist square design */
+.light_theme .theme-switcher button,
+.dark_theme .theme-switcher button {
+  border: var(--brutal-border-width) solid hsl(var(--border-color)) !important;
+  border-radius: 0 !important;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1) !important;
+  background: hsl(var(--bg-color-two)) !important;
+}
+
+header .theme-switcher button[data-theme="light_theme"] {
+  background: hsl(var(--light-color)) !important;
+  border-color: hsl(var(--main-color-one)) !important;
+  box-shadow: 3px 3px 0 rgba(255, 107, 0, 0.2) !important;
+}
+
+header .theme-switcher button[data-theme="dark_theme"] {
+  background: hsl(var(--dark-color)) !important;
+  border-color: hsl(120, 100%, 50%) !important;
+  box-shadow: 3px 3px 0 rgba(0, 255, 100, 0.2) !important;
+}
+
+.light_theme .theme-switcher button:after,
+.dark_theme .theme-switcher button:after {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: hsl(var(--main-color-one)) !important;
+  border: 2px solid hsl(var(--t-color-one));
+}
+
+header .theme-switcher button[data-theme="dark_theme"]::after {
+  left: 3px !important;
+  background: hsl(120, 100%, 50%) !important;
+  border-color: hsl(0, 0%, 15%) !important;
+}
+
+header .theme-switcher button[data-theme="light_theme"]::after {
+  left: 23px !important;
+  background: hsl(var(--primary-color)) !important;
+  border-color: hsl(0, 0%, 100%) !important;
+}
+
+.light_theme .theme-switcher button:hover {
+  animation: switcherWiggle 0.4s ease-in-out;
+}
+
+/* Notifications */
+.light_theme .notifications-container .notification,
+.dark_theme .notifications-container .notification {
+  border: var(--brutal-border-width) solid currentColor;
+  border-radius: 0;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Tooltips */
+.light_theme .has-tooltip .custom-tooltip,
+.light_theme .has-ultimate-tooltip .ultimate-tooltip,
+.dark_theme .has-tooltip .custom-tooltip,
+.dark_theme .has-ultimate-tooltip .ultimate-tooltip {
+  border: var(--brutal-border-width) solid hsl(var(--t-color-one));
+  border-radius: 0;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Works filter buttons */
+.light_theme .portfolio-section .section-content .portfolio-items .works-filter li button,
+.dark_theme .portfolio-section .section-content .portfolio-items .works-filter li button {
+  border: var(--brutal-border-width) solid transparent;
+  border-radius: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+}
+
+.light_theme .portfolio-section .section-content .portfolio-items .works-filter li button.active,
+.light_theme .portfolio-section .section-content .portfolio-items .works-filter li button:hover,
+.dark_theme .portfolio-section .section-content .portfolio-items .works-filter li button.active,
+.dark_theme .portfolio-section .section-content .portfolio-items .works-filter li button:hover {
+  border-color: hsl(var(--main-color-one));
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+  transform: translate(-1px, -1px);
+}
+
+/* ============================================
+   PLAYFUL DARK THEME EFFECTS
+   ============================================ */
+
+/* Animated grid background with neon glow */
+@keyframes neonPulse {
+  0%, 100% { opacity: 0.03; }
+  50% { opacity: 0.08; }
+}
+
+.dark_theme #app-inner:after {
+  background-image: linear-gradient(
+      rgba(0, 255, 100, 0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(0, 255, 100, 0.03) 1px, transparent 1px);
+  animation: neonPulse 4s ease-in-out infinite;
+}
+
+/* Playful button effects with color variations */
+@keyframes buttonWiggle {
+  0%, 100% { transform: translate(-2px, -2px) rotate(0deg); }
+  25% { transform: translate(-2px, -2px) rotate(-1deg); }
+  75% { transform: translate(-2px, -2px) rotate(1deg); }
+}
+
+@keyframes colorShift {
+  0% { border-color: hsl(120, 100%, 50%); box-shadow: 6px 6px 0 rgba(0, 255, 100, 0.3); }
+  33% { border-color: hsl(180, 100%, 50%); box-shadow: 6px 6px 0 rgba(0, 255, 255, 0.3); }
+  66% { border-color: hsl(330, 100%, 65%); box-shadow: 6px 6px 0 rgba(255, 0, 150, 0.3); }
+  100% { border-color: hsl(120, 100%, 50%); box-shadow: 6px 6px 0 rgba(0, 255, 100, 0.3); }
+}
+
+.dark_theme .btn {
+  border-color: hsl(var(--main-color-one));
+  box-shadow: var(--brutal-shadow-offset) var(--brutal-shadow-offset) 0 rgba(0, 255, 100, 0.3);
+  background: linear-gradient(135deg, hsl(var(--main-color-one)) 0%, hsl(180, 100%, 50%) 100%);
+  color: hsl(0, 0%, 15%);
+  font-weight: 900;
+  position: relative;
+  overflow: hidden;
+}
+
+.dark_theme .btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.dark_theme .btn:hover:before {
+  left: 100%;
+}
+
+.dark_theme .btn:hover {
+  animation: buttonWiggle 0.3s ease-in-out, colorShift 3s ease-in-out infinite;
+  transform: translate(-2px, -2px) scale(1.02);
+}
+
+.dark_theme .btn:active {
+  transform: translate(0, 0) scale(0.98);
+  animation: none;
+}
+
+/* Playful card hover effects */
+@keyframes cardBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.dark_theme .statistics-section .statistics-items li a:hover,
+.dark_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item:hover {
+  animation: cardBounce 0.6s ease-in-out;
+  border-color: hsl(180, 100%, 50%);
+  box-shadow: 8px 8px 0 rgba(0, 255, 255, 0.3);
+}
+
+/* Colorful statistics items */
+.dark_theme .statistics-section .statistics-items li:nth-child(1) a {
+  border-color: hsl(120, 100%, 50%);
+  box-shadow: 8px 8px 0 rgba(0, 255, 100, 0.3);
+}
+
+.dark_theme .statistics-section .statistics-items li:nth-child(2) a {
+  border-color: hsl(180, 100%, 50%);
+  box-shadow: 8px 8px 0 rgba(0, 255, 255, 0.3);
+}
+
+.dark_theme .statistics-section .statistics-items li:nth-child(3) a {
+  border-color: hsl(330, 100%, 65%);
+  box-shadow: 8px 8px 0 rgba(255, 0, 150, 0.3);
+}
+
+.dark_theme .statistics-section .statistics-items li a:hover {
+  transform: translate(-4px, -4px) scale(1.05);
+  animation: statBounce 0.5s ease-in-out;
+}
+
+@keyframes statBounce {
+  0%, 100% { transform: translate(-4px, -4px) scale(1.05); }
+  50% { transform: translate(-4px, -8px) scale(1.08); }
+}
+
+/* Colorful skill items with rotation */
+@keyframes skillSpin {
+  0% { transform: translate(-2px, -2px) rotate(0deg); }
+  100% { transform: translate(-2px, -2px) rotate(360deg); }
+}
+
+.dark_theme .skills-section .section-content .skills-items li {
+  border-color: hsl(var(--main-color-one));
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.dark_theme .skills-section .section-content .skills-items li:nth-child(odd):hover {
+  border-color: hsl(180, 100%, 50%);
+  box-shadow: 6px 6px 0 rgba(0, 255, 255, 0.3);
+  transform: translate(-2px, -2px) rotate(-2deg) scale(1.1);
+}
+
+.dark_theme .skills-section .section-content .skills-items li:nth-child(even):hover {
+  border-color: hsl(330, 100%, 65%);
+  box-shadow: 6px 6px 0 rgba(255, 0, 150, 0.3);
+  transform: translate(-2px, -2px) rotate(2deg) scale(1.1);
+}
+
+/* Playful form inputs */
+.dark_theme .form-styled .group .control input:not([type=radio]):not([type=checkbox]):not([type=file]):focus,
+.dark_theme .form-styled .group .control textarea:focus {
+  border-color: hsl(var(--main-color-one));
+  box-shadow: 6px 6px 0 rgba(0, 255, 100, 0.3);
+  background: linear-gradient(135deg, hsl(0, 0%, 18%) 0%, hsl(0, 0%, 20%) 100%);
+  animation: inputGlow 2s ease-in-out infinite;
+}
+
+@keyframes inputGlow {
+  0%, 100% { box-shadow: 6px 6px 0 rgba(0, 255, 100, 0.3); }
+  50% { box-shadow: 6px 6px 0 rgba(0, 255, 100, 0.5); }
+}
+
+/* Colorful social icons */
+.dark_theme .contact-section .section-content .contact-text .social li:nth-child(1) a {
+  border-color: hsl(120, 100%, 50%);
+  box-shadow: 3px 3px 0 rgba(0, 255, 100, 0.3);
+}
+
+.dark_theme .contact-section .section-content .contact-text .social li:nth-child(2) a {
+  border-color: hsl(180, 100%, 50%);
+  box-shadow: 3px 3px 0 rgba(0, 255, 255, 0.3);
+}
+
+.dark_theme .contact-section .section-content .contact-text .social li:nth-child(3) a {
+  border-color: hsl(330, 100%, 65%);
+  box-shadow: 3px 3px 0 rgba(255, 0, 150, 0.3);
+}
+
+.dark_theme .contact-section .section-content .contact-text .social li:nth-child(4) a {
+  border-color: hsl(60, 100%, 50%);
+  box-shadow: 3px 3px 0 rgba(255, 255, 0, 0.3);
+}
+
+.dark_theme .contact-section .section-content .contact-text .social li a:hover {
+  transform: translate(-2px, -2px) scale(1.15) rotate(5deg);
+  animation: iconPulse 0.5s ease-in-out;
+}
+
+@keyframes iconPulse {
+  0%, 100% { transform: translate(-2px, -2px) scale(1.15) rotate(5deg); }
+  50% { transform: translate(-2px, -2px) scale(1.25) rotate(-5deg); }
+}
+
+/* Playful typography with gradient effects */
+.dark_theme h1,
+.dark_theme h2 {
+  background: linear-gradient(135deg, hsl(120, 100%, 50%) 0%, hsl(180, 100%, 50%) 50%, hsl(330, 100%, 65%) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textShimmer 3s ease-in-out infinite;
+}
+
+@keyframes textShimmer {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.2); }
+}
+
+.dark_theme h3,
+.dark_theme h4 {
+  color: hsl(var(--main-color-one));
+  text-shadow: 0 0 10px rgba(0, 255, 100, 0.5);
+}
+
+/* Playful scroll to top button */
+.dark_theme .scroll-to-top {
+  border-color: hsl(var(--main-color-one));
+  box-shadow: 4px 4px 0 rgba(0, 255, 100, 0.3);
+  background: linear-gradient(135deg, hsl(120, 100%, 50%) 0%, hsl(180, 100%, 50%) 100%);
+}
+
+.dark_theme .scroll-to-top:hover {
+  animation: bounceUp 0.6s ease-in-out;
+  transform: translate(-2px, -2px) scale(1.1);
+}
+
+@keyframes bounceUp {
+  0%, 100% { transform: translate(-2px, -2px) scale(1.1); }
+  50% { transform: translate(-2px, -6px) scale(1.15); }
+}
+
+/* Colorful filter buttons */
+.dark_theme .portfolio-section .section-content .portfolio-items .works-filter li button.active {
+  background: linear-gradient(135deg, hsl(120, 100%, 50%) 0%, hsl(180, 100%, 50%) 100%);
+  color: hsl(0, 0%, 15%);
+  border-color: hsl(var(--main-color-one));
+  box-shadow: 3px 3px 0 rgba(0, 255, 100, 0.3);
+  animation: filterPulse 2s ease-in-out infinite;
+}
+
+@keyframes filterPulse {
+  0%, 100% { box-shadow: 3px 3px 0 rgba(0, 255, 100, 0.3); }
+  50% { box-shadow: 3px 3px 0 rgba(0, 255, 100, 0.5); }
+}
+
+/* Playful header and footer */
+.dark_theme header {
+  border-bottom: var(--brutal-border-width) solid hsl(var(--main-color-one));
+  box-shadow: 0 var(--brutal-shadow-offset) 0 rgba(0, 255, 100, 0.3);
+}
+
+.dark_theme footer {
+  border-top: var(--brutal-border-width) solid hsl(var(--main-color-one));
+  box-shadow: 0 calc(-1 * var(--brutal-shadow-offset)) 0 rgba(0, 255, 100, 0.3);
+}
+
+/* Animated theme switcher */
+.dark_theme .theme-switcher button:hover {
+  animation: switcherWiggle 0.4s ease-in-out;
+}
+
+@keyframes switcherWiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-3deg); }
+  75% { transform: rotate(3deg); }
+}
+
+/* Playful notifications */
+.dark_theme .notifications-container .notification.success {
+  border-color: hsl(120, 100%, 50%);
+  box-shadow: 4px 4px 0 rgba(0, 255, 100, 0.3);
+  background: linear-gradient(135deg, hsl(120, 100%, 20%) 0%, hsl(120, 100%, 15%) 100%);
+}
+
+.dark_theme .notifications-container .notification {
+  animation: slideInBounce 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@keyframes slideInBounce {
+  0% { transform: translateX(100px) scale(0.8); opacity: 0; }
+  60% { transform: translateX(-10px) scale(1.05); }
+  100% { transform: translateX(0) scale(1); opacity: 1; }
+}
+
+/* ============================================
+   PLAYFUL LIGHT THEME EFFECTS
+   ============================================ */
+
+/* Animated grid background with colorful pattern */
+@keyframes lightPulse {
+  0%, 100% { opacity: 0.02; }
+  50% { opacity: 0.05; }
+}
+
+.light_theme #app-inner:after {
+  background-image: linear-gradient(
+      rgba(255, 107, 0, 0.02) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(0, 150, 255, 0.02) 1px, transparent 1px);
+  animation: lightPulse 4s ease-in-out infinite;
+}
+
+/* Playful button effects with vibrant colors */
+@keyframes lightButtonWiggle {
+  0%, 100% { transform: translate(-2px, -2px) rotate(0deg); }
+  25% { transform: translate(-2px, -2px) rotate(-1deg); }
+  75% { transform: translate(-2px, -2px) rotate(1deg); }
+}
+
+@keyframes lightColorShift {
+  0% { border-color: hsl(24, 100%, 50%); box-shadow: 6px 6px 0 rgba(255, 107, 0, 0.3); }
+  33% { border-color: hsl(210, 100%, 50%); box-shadow: 6px 6px 0 rgba(0, 150, 255, 0.3); }
+  66% { border-color: hsl(280, 100%, 60%); box-shadow: 6px 6px 0 rgba(200, 100, 255, 0.3); }
+  100% { border-color: hsl(24, 100%, 50%); box-shadow: 6px 6px 0 rgba(255, 107, 0, 0.3); }
+}
+
+.light_theme .btn {
+  border-color: hsl(var(--main-color-one));
+  box-shadow: var(--brutal-shadow-offset) var(--brutal-shadow-offset) 0 rgba(255, 107, 0, 0.25);
+  background: linear-gradient(135deg, hsl(var(--main-color-one)) 0%, hsl(210, 100%, 50%) 100%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 900;
+  position: relative;
+  overflow: hidden;
+}
+
+.light_theme .btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s;
+}
+
+.light_theme .btn:hover:before {
+  left: 100%;
+}
+
+.light_theme .btn:hover {
+  animation: lightButtonWiggle 0.3s ease-in-out, lightColorShift 3s ease-in-out infinite;
+  transform: translate(-2px, -2px) scale(1.02);
+}
+
+.light_theme .btn:active {
+  transform: translate(0, 0) scale(0.98);
+  animation: none;
+}
+
+/* Playful card hover effects */
+.light_theme .statistics-section .statistics-items li a:hover,
+.light_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item:hover {
+  animation: cardBounce 0.6s ease-in-out;
+  border-color: hsl(210, 100%, 50%);
+  box-shadow: 8px 8px 0 rgba(0, 150, 255, 0.3);
+}
+
+/* Colorful skill items with rotation */
+.light_theme .skills-section .section-content .skills-items li {
+  border-color: hsl(var(--main-color-one));
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.light_theme .skills-section .section-content .skills-items li:nth-child(odd):hover {
+  border-color: hsl(210, 100%, 50%);
+  box-shadow: 6px 6px 0 rgba(0, 150, 255, 0.3);
+  transform: translate(-2px, -2px) rotate(-2deg) scale(1.1);
+}
+
+.light_theme .skills-section .section-content .skills-items li:nth-child(even):hover {
+  border-color: hsl(280, 100%, 60%);
+  box-shadow: 6px 6px 0 rgba(200, 100, 255, 0.3);
+  transform: translate(-2px, -2px) rotate(2deg) scale(1.1);
+}
+
+/* Playful form inputs */
+.light_theme .form-styled .group .control input:not([type=radio]):not([type=checkbox]):not([type=file]):focus,
+.light_theme .form-styled .group .control textarea:focus {
+  border-color: hsl(var(--main-color-one));
+  box-shadow: 6px 6px 0 rgba(255, 107, 0, 0.3);
+  background: linear-gradient(135deg, hsl(var(--inputs-bg-color)) 0%, hsl(var(--bg-color-two)) 100%);
+  animation: lightInputGlow 2s ease-in-out infinite;
+}
+
+@keyframes lightInputGlow {
+  0%, 100% { box-shadow: 6px 6px 0 rgba(255, 107, 0, 0.3); }
+  50% { box-shadow: 6px 6px 0 rgba(255, 107, 0, 0.5); }
+}
+
+/* Colorful social icons */
+.light_theme .contact-section .section-content .contact-text .social li:nth-child(1) a {
+  border-color: hsl(24, 100%, 50%);
+  box-shadow: 3px 3px 0 rgba(255, 107, 0, 0.3);
+}
+
+.light_theme .contact-section .section-content .contact-text .social li:nth-child(2) a {
+  border-color: hsl(210, 100%, 50%);
+  box-shadow: 3px 3px 0 rgba(0, 150, 255, 0.3);
+}
+
+.light_theme .contact-section .section-content .contact-text .social li:nth-child(3) a {
+  border-color: hsl(280, 100%, 60%);
+  box-shadow: 3px 3px 0 rgba(200, 100, 255, 0.3);
+}
+
+.light_theme .contact-section .section-content .contact-text .social li:nth-child(4) a {
+  border-color: hsl(330, 100%, 65%);
+  box-shadow: 3px 3px 0 rgba(255, 100, 200, 0.3);
+}
+
+.light_theme .contact-section .section-content .contact-text .social li a:hover {
+  transform: translate(-2px, -2px) scale(1.15) rotate(5deg);
+  animation: iconPulse 0.5s ease-in-out;
+}
+
+/* Playful typography with gradient effects */
+.light_theme h1,
+.light_theme h2 {
+  background: linear-gradient(135deg, hsl(24, 100%, 50%) 0%, hsl(210, 100%, 50%) 50%, hsl(280, 100%, 60%) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textShimmer 3s ease-in-out infinite;
+}
+
+.light_theme h3,
+.light_theme h4 {
+  color: hsl(var(--main-color-one));
+  text-shadow: 0 0 10px rgba(255, 107, 0, 0.4);
+}
+
+/* Playful scroll to top button */
+.light_theme .scroll-to-top {
+  border-color: hsl(var(--main-color-one));
+  box-shadow: 4px 4px 0 rgba(255, 107, 0, 0.3);
+  background: linear-gradient(135deg, hsl(24, 100%, 50%) 0%, hsl(210, 100%, 50%) 100%);
+}
+
+.light_theme .scroll-to-top:hover {
+  animation: bounceUp 0.6s ease-in-out;
+  transform: translate(-2px, -2px) scale(1.1);
+}
+
+/* Colorful filter buttons */
+.light_theme .portfolio-section .section-content .portfolio-items .works-filter li button.active {
+  background: linear-gradient(135deg, hsl(24, 100%, 50%) 0%, hsl(210, 100%, 50%) 100%);
+  color: hsl(0, 0%, 100%);
+  border-color: hsl(var(--main-color-one));
+  box-shadow: 3px 3px 0 rgba(255, 107, 0, 0.3);
+  animation: filterPulse 2s ease-in-out infinite;
+}
+
+/* Playful header and footer */
+.light_theme header {
+  border-bottom: var(--brutal-border-width) solid hsl(var(--main-color-one));
+  box-shadow: 0 var(--brutal-shadow-offset) 0 rgba(255, 107, 0, 0.25);
+}
+
+.light_theme footer {
+  border-top: var(--brutal-border-width) solid hsl(var(--main-color-one));
+  box-shadow: 0 calc(-1 * var(--brutal-shadow-offset)) 0 rgba(255, 107, 0, 0.25);
+}
+
+/* Animated theme switcher */
+.light_theme .theme-switcher button:hover {
+  animation: switcherWiggle 0.4s ease-in-out;
+}
+
+/* Colorful statistics items */
+.light_theme .statistics-section .statistics-items li:nth-child(1) a {
+  border-color: hsl(24, 100%, 50%);
+  box-shadow: 8px 8px 0 rgba(255, 107, 0, 0.25);
+}
+
+.light_theme .statistics-section .statistics-items li:nth-child(2) a {
+  border-color: hsl(210, 100%, 50%);
+  box-shadow: 8px 8px 0 rgba(0, 150, 255, 0.25);
+}
+
+.light_theme .statistics-section .statistics-items li:nth-child(3) a {
+  border-color: hsl(280, 100%, 60%);
+  box-shadow: 8px 8px 0 rgba(200, 100, 255, 0.25);
+}
+
+.light_theme .statistics-section .statistics-items li a:hover {
+  transform: translate(-4px, -4px) scale(1.05);
+  animation: statBounce 0.5s ease-in-out;
+}
+
+/* Colorful contact info */
+.light_theme .contact-section .section-content .contact-text .contact-info>li:nth-child(1) {
+  border-left-color: hsl(24, 100%, 50%);
+}
+
+.light_theme .contact-section .section-content .contact-text .contact-info>li:nth-child(2) {
+  border-left-color: hsl(210, 100%, 50%);
+}
+
+.light_theme .contact-section .section-content .contact-text .contact-info>li:hover {
+  animation: contactBounce 0.4s ease-in-out;
+  transform: translateX(4px);
+}
+
+/* Playful experience timeline */
+.light_theme .experience-section .section-content .experience-timeline .timeline-items li {
+  border-color: hsl(var(--main-color-one));
+  box-shadow: 4px 4px 0 rgba(255, 107, 0, 0.25);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.light_theme .experience-section .section-content .experience-timeline .timeline-items li:hover {
+  transform: scale(1.1) rotate(-1deg);
+  border-color: hsl(210, 100%, 50%);
+  box-shadow: 6px 6px 0 rgba(0, 150, 255, 0.25);
+}
+
+/* Playful notifications */
+.light_theme .notifications-container .notification.success {
+  border-color: hsl(24, 100%, 50%);
+  box-shadow: 4px 4px 0 rgba(255, 107, 0, 0.3);
+  background: linear-gradient(135deg, hsl(24, 100%, 95%) 0%, hsl(24, 100%, 90%) 100%);
+}
+
+.light_theme .notifications-container .notification {
+  animation: slideInBounce 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}

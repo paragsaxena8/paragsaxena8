@@ -6,7 +6,7 @@
   /* animations mixin */
 
   /* ------------------------------------- */
-  var animationsMixin = {
+  const animationsMixin = {
     mounted() {
       /* preloader screen */
       this.animPreloaderScreen(); // initialize animation effects
@@ -576,12 +576,13 @@
     data() {
       return {
         // the date my career started (change to yours)
-        careerStartDate: 2019,
+        careerStartDate: 2020,
         // the date copyright started (change to yours)
-        copyrightStartDate: 2019,
+        copyrightStartDate: 2020,
         // for the template theme
         appTheme: "dark_theme",
         savedTheme: null,
+        themeOptions: ["light_theme", "dark_theme"],
         // flag to toggle the preloader
         isPreloading: true,
         // toast notifications array
@@ -639,6 +640,11 @@
         ],
         // flag to toggle between skills types in skills section
         skillsType: "",
+        aboutSection: {
+          aboutMeText: `Hi, I'm Parag Saxena, a Full Stack Developer with around ${
+            new Date().getFullYear() - 2020 + 1
+          } years of experience building clean, scalable, and user-focused web applications. I specialize in Angular, TypeScript, Node.js, GraphQL, and MongoDB, and I enjoy turning complex ideas into simple, usable, and reliable digital experiences.<br><br>Over the years, I've worked across the stack-leading UI modules, improving application performance, and building features that are both intuitive and efficient. I care about clean code, thoughtful architecture, and creating systems that teams can maintain and scale with confidence.<br>I'm comfortable working end-to-end: designing smooth front-end experiences, building solid backend APIs, improving performance, mentoring developers, and collaborating closely with teams. I'm also a big believer in using AI-assisted development tools to write smarter code, boost productivity, and explore better solutions.<br><br>At my core, I'm someone who enjoys learning, experimenting, and improving a little every day. Whether it's building new features, solving performance bottlenecks, or exploring emerging tech, I love the process of creating things that work well and make a real difference.`,
+        },
 
         //social-accounts
         socialAccounts: [
@@ -659,7 +665,7 @@
           },
           {
             title: "Instagram",
-            link: "https://instagram.com/paragps_",
+            link: "https://instagram.com/iparagsaxena",
             icon: "fa fa-instagram",
           },
         ],
@@ -752,7 +758,7 @@
           },
           {
             date: "2021",
-            period: "08/2020 - Present",
+            period: "05/2021 - 05/2023",
             companyName: {
               en: "Ace Analytics",
             },
@@ -761,6 +767,19 @@
             },
             desc: {
               en: "Responsibilities include frontend development using Angular, JavaScript, and CSS.",
+            },
+          },
+          {
+            date: "2025",
+            period: "06/2023 - 11/2025",
+            companyName: {
+              en: "Ace Analytics",
+            },
+            jobTitle: {
+              en: "Module Lead",
+            },
+            desc: {
+              en: "Responsibilities include leading a team of developers, managing projects, and ensuring the quality of the code.",
             },
           },
         ],
@@ -777,110 +796,26 @@
         allPortfolioItems: [
           {
             id: 1,
-            url: "https://github.com/paragsaxena8/smart-space-ui",
-            imgUrl: "../assets/images/portfolio/5.png",
+            url: "https://github.com/paragsaxena8/closet-keeper",
+            imgUrl: "../assets/images/portfolio/3.avif",
             title: {
-              en: "Smart Space",
+              en: "Closet Keeper",
             },
             date: {
-              en: "April 2022",
+              en: "July 2024",
             },
             desc: {
-              en: "A Blog where you can read and create new posts",
+              en: "Closet Keeper is a open-source, easy-to-use app that helps you organize your closet and keep track of your clothes. You can add, categorize, and make notes on items, making it easier to plan outfits and get dressed efficiently.",
             },
-            category: "Angular",
-            tools: [],
+            category: "Dashboard",
+            tools: ["HTML", "CSS", "JavaScript", "React"],
             screenshots: {},
+            show: true
           },
           {
             id: 2,
-            url: "https://paragsaxena8.github.io/coVaccinate/",
-            imgUrl: "../assets/images/portfolio/3.png",
-            title: {
-              en: "Co-Vaccinate",
-            },
-            date: {
-              en: "Jan 2021",
-            },
-            desc: {
-              en: "A Covid-19 Vaccination slot searching Application using Angular and Cowin API's.",
-            },
-            category: "Angular",
-            tools: [],
-            screenshots: {},
-          },
-          {
-            id: 3,
-            url: "https://github.com/paragsaxena8/Rakshak",
-            imgUrl: "../assets/images/portfolio/4.png",
-            title: {
-              en: "Rakshak - A Web App Vulnerability Testing Tool",
-            },
-            date: {
-              en: "September 2020",
-            },
-            desc: {
-              en: "An Integrated Web Application Vulnerability Testing Tool with Web CLI, Build with Php & Python with GUI interface",
-            },
-            category: "HTML",
-            tools: ["HTML", "CSS", "JavaScript", "PHP", "Python"],
-            screenshots: {},
-          },
-          {
-            id: 4,
-            url: "http://lovesurprises.in",
-            imgUrl: "../assets/images/portfolio/2.png",
-            title: {
-              en: "Love Surprises",
-            },
-            date: {
-              en: "June 2019",
-            },
-            desc: {
-              en: "An Event Management Website using Bootstrap & JQuery",
-            },
-            category: "HTML",
-            tools: ["HTML", "CSS", "JavaScript", "jQuery"],
-            screenshots: {},
-          },
-          {
-            id: 5,
-            url: "https://mahamudrafarms.com",
-            imgUrl: "../assets/images/portfolio/1.png",
-            title: {
-              en: "MahaMudra Farms",
-            },
-            date: {
-              en: "Nov 2018",
-            },
-            desc: {
-              en: "A Natural Farm Website using PHP and Web technologies",
-            },
-            category: "HTML",
-            tools: ["UI", "HTML", "CSS", "PHP"],
-            screenshots: {},
-          },
-          {
-            id: 6,
-            url: "http://nightingaleconsultancy.com/",
-            imgUrl: "../assets/images/portfolio/6.png",
-            title: {
-              en: "Nightingale consultancy",
-            },
-            date: {
-              en: "May 2023",
-            },
-            desc: {
-              en: "A Job recuritment portal based on UK",
-            },
-            category: "HTML",
-            tools: ["UI", "HTML", "CSS", "PHP"],
-            screenshots: {},
-          },
-          {
-            id: 7,
             url: "https://www.behance.net/gallery/175372191/UIUX-Design",
-            imgUrl: "../assets/images/portfolio/7.png",
+            imgUrl: "../assets/images/portfolio/7.avif",
             title: {
               en: "UI/UX Design",
             },
@@ -893,10 +828,85 @@
             category: "UX",
             tools: ["UX", "Adobe XD"],
             screenshots: {},
+            show: false
           },
-        ].reverse(),
+          {
+            id: 3,
+            url: "https://github.com/paragsaxena8/smart-space-ui",
+            imgUrl: "../assets/images/portfolio/5.avif",
+            title: {
+              en: "Smart Space",
+            },
+            date: {
+              en: "April 2022",
+            },
+            desc: {
+              en: "A Web Application where you can create Blogs, Share Ideas and connect with like-minded people.",
+            },
+            category: "Dashboard",
+            tools: ["HTML", "CSS", "JavaScript", "Angular"],
+            screenshots: {},
+            show: true
+          },
+          {
+            id: 4,
+            url: "https://paragsaxena8.github.io/coVaccinate/",
+            imgUrl: "../assets/images/portfolio/3.avif",
+            title: {
+              en: "Co-Vaccinate",
+            },
+            date: {
+              en: "Jan 2021",
+            },
+            desc: {
+              en: "A Covid-19 Vaccination slot searching Application using Angular and Cowin API's.",
+            },
+            category: "Tools",
+            tools: ["HTML", "CSS", "JavaScript", "Angular"],
+            screenshots: {},
+            show: true
+          },
+          {
+            id: 5,
+            url: "https://github.com/paragsaxena8/Rakshak",
+            imgUrl: "../assets/images/portfolio/4.avif",
+            title: {
+              en: "Rakshak - A Web App Vulnerability Testing Tool",
+            },
+            date: {
+              en: "September 2020",
+            },
+            desc: {
+              en: "Built a PHP- and Python-powered web application for an OWASP vulnerability testing tool, complete with a Web CLI interface for executing security checks.",
+            },
+            category: "Security",
+            tools: ["HTML", "CSS", "JavaScript", "PHP", "Python"],
+            screenshots: {},
+            show: true
+          },
+          {
+            id: 6,
+            url: "https://mahamudrafarms.com",
+            imgUrl: "../assets/images/portfolio/1.avif",
+            title: {
+              en: "MahaMudra Farms",
+            },
+            date: {
+              en: "Nov 2018",
+            },
+            desc: {
+              en: "Built a PHP and HTML–based web application for MahaMudra Farms, supporting their organic farming operations.",
+            },
+            category: "Portfolio",
+            tools: ["HTML", "CSS", "PHP"],
+            screenshots: {},
+            show: true
+          },
+        ],
         // viewed portfolio items
         portfolioItems: [],
+        // blog post count
+        blogPost: 0,
         // list of testimonials items to loop through it
         testimonialsItems: [
           {
@@ -1029,37 +1039,103 @@
       },
 
       allBlogPosts() {
-        let url =
-          "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@paragXd";
-        let blogposts = document.querySelector("#blogpost");
-        let postsCount = document.querySelector("#postCount");
+        const MEDIUM_USERNAME = "@paragxd";
+        const RSS_URL = `https://medium.com/feed/${MEDIUM_USERNAME}`;
+        const API_URL = `https://api.rss2json.com/v1/api.json?rss_url=${RSS_URL}`;
 
-        if (blogposts) {
-          fetch(url)
-            .then((res) => res.json())
-            .then((data) => {
-              const res = data.items; //This is an array with the content. No feed, no info about author etc..
-              const posts = res.filter((item) => item.categories.length > 0);
-              // Put things in right spots of markup
-              let output = "";
-              posts.forEach((blogpost) => {
-                output += `
-                <li class="portfolio-item mb-4">
-                  <a href="${blogpost.guid}" target="_blank" rel="noopener">
-                    <div class="item-img">
-                      <img class="portfolio-img" loading="lazy" src="${blogpost.thumbnail}"  onerror="this.src='../assets/images/default-blog.png'" alt="${blogpost.guid}" >
+        // 1. HELPER: Extract Image source from HTML string
+        const extractImage = (item) => {
+          // Case 1: The feed actually has a thumbnail
+          if (item.thumbnail && item.thumbnail.length > 0)
+            return item.thumbnail;
+
+          // Case 2: We have to hunt for the <img src=""> inside the content
+          const doc = new DOMParser().parseFromString(
+            item.description,
+            "text/html"
+          );
+          const img = doc.querySelector("img");
+
+          // Case 3: Return found image or a placeholder
+          return img
+            ? img.src
+            : "https://via.placeholder.com/400x200?text=Read+on+Medium";
+        };
+
+        // 2. HELPER: Remove HTML tags for clean text preview
+        const cleanText = (html) => {
+          const doc = new DOMParser().parseFromString(html, "text/html");
+          return doc.body.textContent || "";
+        };
+
+        async function fetchPosts() {
+          let blogposts = document.querySelector("#blogpost");
+          let postsCount = document.querySelector("#postCount");
+
+          try {
+            const res = await fetch(API_URL);
+            const data = await res.json();
+
+            if (data.status !== "ok") throw new Error("Failed to fetch");
+
+            // 3. SIMULATED GRAPHQL: Map to a clean object structure
+            // We download everything, but we process it into a clean list immediately
+            const cleanPosts = data.items.map((item) => ({
+              title: item.title,
+              link: item.link,
+              date: new Date(item.pubDate).toLocaleDateString(),
+              // This fixes the "No Image" issue:
+              image: extractImage(item),
+              // This creates a clean description without HTML tags:
+              description: cleanText(item.description).substring(0, 120) + "...",
+              categories: Array.isArray(item.categories) ? item.categories : [],
+            }));
+
+            // Render - append to existing list
+            const blogPostsHTML = cleanPosts
+              .map(
+                (post) => {
+                  const tagsHTML = post.categories && post.categories.length
+                    ? `<div class="tools">${post.categories.map(cat => `<span class=\"tool-tag\">${cat}</span>`).join('')}</div>`
+                    : "";
+                  return `
+                <li class="portfolio-item">
+                  <div class="item-img">
+                    <img class="portfolio-img" loading="lazy" src="${post.image}" onerror="this.src='../assets/images/default-blog.png'" alt="${post.title}" />
+                  </div>
+                  <div class="item-details">
+                    <h3 class="title">${post.title}</h3>
+                    <div class="date">${post.date}</div>
+                    <p class="description">${post.description}</p>
+                    <div class="meta-info">
+                      ${tagsHTML}
+                      <div class="actions"><a class="visit-btn" href="${post.link}" target="_blank" rel="noopener">Visit</a></div>
                     </div>
-                    <div class="item-details">
-                      <h3 class="title">${blogpost.title}</h3>
-                      <div class="date">${blogpost.pubDate}</div>
-                    </div>
-                  </a>
+                  </div>
                 </li>`;
-              });
-              blogposts.innerHTML = output;
-              postsCount.innerText = `${posts.length}+`;
+                }
+              )
+              .join("");
+            blogposts.insertAdjacentHTML('beforeend', blogPostsHTML);
+            postsCount.innerText = `${cleanPosts.length}+`;
+            // inline suppression hover behavior for newly added blog Visit buttons
+            const blogVisitBtns = document.querySelectorAll('#blogs .visit-btn');
+            blogVisitBtns.forEach(btn => {
+              const card = btn.closest('li.portfolio-item');
+              if (!card || btn.__visitSuppressionBound) return;
+              btn.addEventListener('mouseenter', () => card.classList.add('suppress-tags'));
+              btn.addEventListener('mouseleave', () => card.classList.remove('suppress-tags'));
+              btn.__visitSuppressionBound = true;
             });
+          } catch (err) {
+            const errorHTML = '<li style="grid-column: 1 / -1; text-align: center; padding: 2rem;"><p>Could not load posts.</p></li>';
+            blogposts.insertAdjacentHTML('beforeend', errorHTML);
+            postsCount.innerText = "0";
+            console.error(err);
+          }
         }
+
+        fetchPosts();
       },
 
       // get a theme to use
@@ -1067,8 +1143,13 @@
         // get the saved theme from the localStorage
         const storageSavedTheme = localStorage.getItem("nafieSavedTheme"); // Check to see if there a saved theme
 
-        if (storageSavedTheme) {
+        if (
+          storageSavedTheme &&
+          this.themeOptions.includes(storageSavedTheme)
+        ) {
           this.savedTheme = storageSavedTheme;
+        } else if (storageSavedTheme) {
+          this.savedTheme = this.themeOptions[0];
         } else {
           // So, try to get the browser default theme or make your own default
           // Check to see if Media-Queries are supported
@@ -1090,10 +1171,14 @@
 
       // detect the theme changes
       changeAppTheme() {
-        this.savedTheme === "light_theme"
-          ? (this.savedTheme = "dark_theme")
-          : (this.savedTheme = "light_theme"); // save the new theme in the localStorage
+        const currentIndex = this.themeOptions.indexOf(this.savedTheme);
+        const nextIndex =
+          currentIndex === -1
+            ? 0
+            : (currentIndex + 1) % this.themeOptions.length;
+        this.savedTheme = this.themeOptions[nextIndex];
 
+        // save the new theme in the localStorage
         localStorage.setItem("nafieSavedTheme", this.savedTheme);
       },
 

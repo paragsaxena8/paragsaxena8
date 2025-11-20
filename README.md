@@ -1,10 +1,11 @@
-### Hi there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="29px">
+### 👋 Hi there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="29px" />
 
-I'm Parag Saxena, a Senior Software Engineer specializing in creating dynamic and user-friendly front-end experiences.
+I'm **Parag Saxena**, a Senior Software Engineer focused on building clean, scalable and user‑centric products across the stack (Angular, TypeScript, Node.js, GraphQL, MongoDB). I enjoy transforming ideas into reliable digital experiences with an eye on performance, maintainability and UX.
 
-- 🔭 I’m currently building awesome web applications using **Angular** & **Node.js**.
-- 📚 Beyond the code, I'm passionate about personal development and financial literacy. Some of my favorite reads are *Atomic Habits*, *Hooked*, and *Start with Why*.
-- 💬 Ask me about front-end development, application architecture, or book recommendations!
+- 🔭 Currently shipping production features with **Angular**, **TypeScript**, and **Node.js**.
+- ⚙️ Leveraging **AI-assisted development** for faster iteration & better code reviews.
+- 📚 Lifelong learner (recent reads: *Atomic Habits*, *Hooked*, *Start With Why*).
+- 💬 Ask me about front-end architecture, UI patterns, or developer enablement.
 
 ---
 
@@ -19,33 +20,30 @@ I'm Parag Saxena, a Senior Software Engineer specializing in creating dynamic an
 
 ---
 
-### 🚀 My Projects
-
+### 🚀 Selected Projects
 | Project | Description | Link |
 |---|---|---|
-| **MahaMudra Farms** | An e-commerce platform for an organic farming initiative. | [![Live](https://img.shields.io/badge/Live-007fff?style=for-the-badge&logo=Google-chrome&logoColor=white)](https://mahamudrafarms.com/) |
-| **Rakshak** | A web application designed for [**add a brief, one-line description here**]. | [![GitHub](https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/paragsaxena8/rakshak) |
-| **Portfolio** | My personal portfolio website showcasing my work and skills. | [![Live](https://img.shields.io/badge/Live-007fff?style=for-the-badge&logo=Google-chrome&logoColor=white)](https://iparagsaxena.in/) |
+| **MahaMudra Farms** | Organic farming e‑commerce presence and brand site. | [![Live](https://img.shields.io/badge/Live-007fff?style=for-the-badge&logo=Google-chrome&logoColor=white)](https://mahamudrafarms.com/) |
+| **Rakshak** | Web app vulnerability testing toolkit (CLI + UI). | [![GitHub](https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/paragsaxena8/Rakshak) |
+| **Closet Keeper** | Open-source wardrobe organizer & outfit planner. | [![Repo](https://img.shields.io/badge/Repo-000000?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/paragsaxena8/closet-keeper) |
+| **Smart Space** | Community platform for sharing blogs & ideas. | [![Repo](https://img.shields.io/badge/Repo-000000?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/paragsaxena8/smart-space-ui) |
+| **Co‑Vaccinate** | Slot finder leveraging CoWIN public APIs. | [![Live](https://img.shields.io/badge/Demo-007fff?style=for-the-badge&logo=Google-chrome&logoColor=white)](https://paragsaxena8.github.io/coVaccinate/) |
+| **Portfolio** | Current personal site featuring rebuilt UI system. | [![Live](https://img.shields.io/badge/Live-007fff?style=for-the-badge&logo=Google-chrome&logoColor=white)](https://iparagsaxena.in/) |
 
 ---
 
-### 📈 My GitHub Stats
-
+### 📈 GitHub Stats
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=paragsaxena8&show_icons=true&hide_border=true&theme=tokyonight" alt="Parag Saxena's GitHub Stats" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=paragsaxena8&layout=compact&hide_border=true&theme=tokyonight" alt="Top Languages" />
-</div>
-
-<div align="center">
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=paragsaxena8.paragsaxena8" alt="visitors">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=paragsaxena8.paragsaxena8" alt="visitors" />
 </div>
 
 ---
 
-### 🔗 Connect with me
-
-[![portfolio](https://img.shields.io/badge/Portfolio-5340ff?style=for-the-badge&logo=Google-chrome&logoColor=white)](https://iparagsaxena.in/)
-[![blog](https://img.shields.io/badge/Blog-5340ff?style=for-the-badge&logo=Medium&logoColor=white)](https://paragxd.medium.com/)
-[![resume](https://img.shields.io/badge/Resume-4285F4?style=for-the-badge&logo=read-the-docs&logoColor=white)](http://iparagsaxena.in/assets/files/cv.pdf)
-[![linked-in](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=LinkedIn&logoColor=white)](https://www.linkedin.com/in/paragxd/)
-[![github](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/paragsaxena8)
+### 🔗 Connect
+[![Portfolio](https://img.shields.io/badge/Portfolio-5340ff?style=for-the-badge&logo=Google-chrome&logoColor=white)](https://iparagsaxena.in/)
+[![Blog](https://img.shields.io/badge/Blog-5340ff?style=for-the-badge&logo=Medium&logoColor=white)](https://paragxd.medium.com/)
+[![Resume](https://img.shields.io/badge/Resume-4285F4?style=for-the-badge&logo=read-the-docs&logoColor=white)](http://iparagsaxena.in/assets/files/cv.pdf)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=LinkedIn&logoColor=white)](https://www.linkedin.com/in/paragxd/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/paragsaxena8)

@@ -1,0 +1,582 @@
+/* Portfolio & Blog Cards - Neo-Brutalist Style */
+
+/* Override the masonry grid layout with a proper card grid */
+.portfolio-section .section-content .portfolio-items.has-works,
+#blogs .portfolio-items.has-works {
+  display: grid;
+  gap: 30px;
+  column-gap: 30px !important;
+  -webkit-column-count: unset !important;
+  -moz-column-count: unset !important;
+  column-count: unset !important;
+}
+
+@media (min-width: 992px) {
+  .portfolio-section .section-content .portfolio-items.has-works,
+  #blogs .portfolio-items.has-works {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+}
+
+@media (max-width: 991px) and (min-width: 577px) {
+  .portfolio-section .section-content .portfolio-items.has-works,
+  #blogs .portfolio-items.has-works {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .portfolio-section .section-content .portfolio-items.has-works,
+  #blogs .portfolio-items.has-works {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card container styling */
+.portfolio-section .section-content .portfolio-items>li.portfolio-item,
+#blogs .portfolio-items>li.portfolio-item {
+  margin-bottom: 0 !important;
+  border-radius: 0 !important;
+  border: var(--brutal-border-width) solid hsl(var(--border-color));
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.2s ease;
+  overflow: visible !important;
+  display: flex;
+  flex-direction: column;
+  background: hsl(var(--bg-color-two));
+  position: relative;
+}
+
+.portfolio-section .section-content .portfolio-items>li.portfolio-item:hover,
+#blogs .portfolio-items>li.portfolio-item:hover {
+  box-shadow: calc(var(--brutal-shadow-offset) + 2px) calc(var(--brutal-shadow-offset) + 2px) 0 var(--brutal-shadow-color);
+}
+
+/* Card link reset */
+.portfolio-section .section-content .portfolio-items>li.portfolio-item a,
+#blogs .portfolio-items>li.portfolio-item a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+}
+
+/* Image container with fixed aspect ratio - only for blogs */
+#blogs .portfolio-items>li .item-img {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-bottom: var(--brutal-border-width) solid hsl(var(--border-color));
+}
+
+#blogs .portfolio-items>li .item-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+#blogs .portfolio-items>li.portfolio-item:hover .item-img img {
+  transform: scale(1.08);
+}
+
+/* Card content/details - always visible */
+.portfolio-section .section-content .portfolio-items>li .item-details,
+#blogs .portfolio-items>li .item-details {
+  position: relative !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  padding: 24px;
+  background: hsl(var(--bg-color-two));
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 1;
+  left: 0 !important;
+  bottom: auto !important;
+  width: 100% !important;
+  transition: none !important;
+}
+
+/* Portfolio-specific spacing (no image) */
+.portfolio-section .section-content .portfolio-items>li .item-details {
+  min-height: 200px;
+  justify-content: flex-start;
+}
+
+/* Blog-specific spacing (has image) */
+#blogs .portfolio-items>li .item-details {
+  min-height: auto;
+  justify-content: space-between;
+}
+
+/* Title styling */
+.portfolio-section .section-content .portfolio-items>li .item-details .title,
+#blogs .portfolio-items>li .item-details .title {
+  transform: none !important;
+  opacity: 1 !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  padding: 0 80px 0 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  font-size: 1.25rem !important;
+  font-weight: 900 !important;
+  color: hsl(var(--t-color-one)) !important;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  line-height: 1.3;
+  transition: color 0.3s ease !important;
+  margin: 0;
+}
+
+/* Blog titles don't need extra padding since they don't have ribbons */
+#blogs .portfolio-items>li .item-details .title {
+  padding: 0 !important;
+}
+
+.portfolio-section .section-content .portfolio-items>li.portfolio-item:hover .item-details .title,
+#blogs .portfolio-items>li.portfolio-item:hover .item-details .title {
+  color: hsl(var(--main-color-one)) !important;
+}
+
+/* Date/category styling */
+.portfolio-section .section-content .portfolio-items>li .item-details .date,
+#blogs .portfolio-items>li .item-details .date {
+  transform: none !important;
+  opacity: 1 !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  width: 100% !important;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  color: hsl(var(--t-color-two)) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: color 0.3s ease !important;
+}
+
+.portfolio-section .section-content .portfolio-items>li.portfolio-item:hover .item-details .date,
+#blogs .portfolio-items>li.portfolio-item:hover .item-details .date {
+  color: hsl(var(--main-color-one)) !important;
+}
+
+/* Description styling */
+.portfolio-section .section-content .portfolio-items>li .item-details .description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: hsl(var(--t-color-two));
+  margin: 0;
+  flex: 1;
+}
+
+/* Meta info container */
+.portfolio-section .section-content .portfolio-items>li .item-details .meta-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+/* Category ribbon styling */
+.portfolio-section .section-content .portfolio-items>li .item-details .category {
+  position: absolute;
+  top: 20px;
+  right: -3px;
+  padding: 8px 16px 8px 12px;
+  background: hsl(var(--main-color-one));
+  color: hsl(var(--light-color));
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: 2px solid hsl(var(--t-color-one));
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  opacity: 0.95;
+  transition: opacity 0.2s ease;
+}
+
+.portfolio-section .section-content .portfolio-items>li.portfolio-item:hover .item-details .category {
+  opacity: 1;
+}
+
+/* Ribbon triangle effect */
+.portfolio-section .section-content .portfolio-items>li .item-details .category::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 8px 0 0;
+  border-color: rgba(0, 0, 0, 0.3) transparent transparent transparent;
+}
+
+/* Tools container */
+.portfolio-section .section-content .portfolio-items>li .item-details .tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Actions container */
+.portfolio-section .section-content .portfolio-items>li .item-details .meta-info .actions {
+  display: flex;
+  margin-top: 4px;
+}
+
+/* Visit button styling */
+.portfolio-section .section-content .portfolio-items>li .item-details .visit-btn {
+  display: block;
+  width: max-content;
+  padding: 8px 16px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: hsl(var(--bg-color-one));
+  color: hsl(var(--t-color-one));
+  border: 3px solid hsl(var(--border-color));
+  box-shadow: 4px 4px 0 hsl(var(--dark-color));
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.portfolio-section .section-content .portfolio-items>li .item-details .visit-btn:hover,
+.portfolio-section .section-content .portfolio-items>li.portfolio-item:hover .item-details .visit-btn {
+  background: hsl(var(--main-color-one));
+  color: hsl(var(--light-color));
+  border-color: hsl(var(--main-color-one));
+  box-shadow: 6px 6px 0 rgba(0,0,0,0.25);
+}
+
+.portfolio-section .section-content .portfolio-items>li .item-details .visit-btn:focus,
+.enable-focus-style .portfolio-section .section-content .portfolio-items>li .item-details .visit-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px hsla(var(--main-color-two),70%), 4px 4px 0 hsl(var(--dark-color));
+}
+
+@media (max-width: 576px) {
+  .portfolio-section .section-content .portfolio-items>li .item-details .visit-btn {
+    padding: 6px 12px;
+    font-size: 0.6rem;
+    box-shadow: 3px 3px 0 hsl(var(--dark-color));
+  }
+}
+
+/* Individual tool tag styling */
+.portfolio-section .section-content .portfolio-items>li .item-details .tool-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background: hsl(var(--bg-color-one));
+  color: hsl(var(--t-color-one));
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 2px solid hsl(var(--border-color));
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.portfolio-section .section-content .portfolio-items>li.portfolio-item:hover .item-details .tool-tag {
+  background: hsl(var(--main-color-one));
+  color: hsl(var(--light-color));
+  border-color: hsl(var(--main-color-one));
+}
+
+/* Suppress tag hover highlighting when Visit button is hovered */
+.portfolio-section .section-content .portfolio-items>li.portfolio-item.suppress-tags:hover .item-details .tool-tag,
+#blogs .portfolio-items>li.portfolio-item.suppress-tags:hover .item-details .tool-tag {
+  background: hsl(var(--bg-color-one));
+  color: hsl(var(--t-color-one));
+  border-color: hsl(var(--border-color));
+}
+
+/* Remove column break rules for grid layout */
+@media (min-width: 992px) {
+  .portfolio-section .section-content .portfolio-items.has-works>li:first-of-type,
+  #blogs .portfolio-items.has-works>li:first-of-type {
+    -webkit-column-break-inside: auto !important;
+    -moz-column-break-inside: auto !important;
+    break-inside: auto !important;
+    overflow: visible !important;
+  }
+}
+
+/* First text box item in grid */
+.portfolio-section .section-content .portfolio-items>li:first-of-type,
+#blogs .portfolio-items>li:first-of-type {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 991px) {
+  .portfolio-section .section-content .portfolio-items>li [class*=text-box],
+  #blogs .portfolio-items>li [class*=text-box] {
+    column-span: none !important;
+    -webkit-column-span: none !important;
+    -moz-column-span: none !important;
+  }
+}
+
+/* ============================================
+   PLAYFUL DARK THEME CARD EFFECTS
+   ============================================ */
+
+/* Colorful card borders in dark theme */
+.dark_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(3n+1),
+.dark_theme #blogs .portfolio-items>li.portfolio-item:nth-child(3n+1) {
+  border-color: hsl(120, 100%, 50%);
+  box-shadow: 6px 6px 0 rgba(0, 255, 100, 0.3);
+}
+
+.dark_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(3n+2),
+.dark_theme #blogs .portfolio-items>li.portfolio-item:nth-child(3n+2) {
+  border-color: hsl(180, 100%, 50%);
+  box-shadow: 6px 6px 0 rgba(0, 255, 255, 0.3);
+}
+
+.dark_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(3n+3),
+.dark_theme #blogs .portfolio-items>li.portfolio-item:nth-child(3n+3) {
+  border-color: hsl(330, 100%, 65%);
+  box-shadow: 6px 6px 0 rgba(255, 0, 150, 0.3);
+}
+
+.dark_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(3n+1):hover,
+.dark_theme #blogs .portfolio-items>li.portfolio-item:nth-child(3n+1):hover {
+  box-shadow: 10px 10px 0 rgba(0, 255, 100, 0.4);
+}
+
+.dark_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(3n+2):hover,
+.dark_theme #blogs .portfolio-items>li.portfolio-item:nth-child(3n+2):hover {
+  box-shadow: 10px 10px 0 rgba(0, 255, 255, 0.4);
+}
+
+.dark_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(3n+3):hover,
+.dark_theme #blogs .portfolio-items>li.portfolio-item:nth-child(3n+3):hover {
+  box-shadow: 10px 10px 0 rgba(255, 0, 150, 0.4);
+}
+
+/* Colorful image borders in dark theme */
+.dark_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(3n+1) .item-img,
+.dark_theme #blogs .portfolio-items>li.portfolio-item:nth-child(3n+1) .item-img {
+  border-bottom-color: hsl(120, 100%, 50%);
+}
+
+.dark_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(3n+2) .item-img,
+.dark_theme #blogs .portfolio-items>li.portfolio-item:nth-child(3n+2) .item-img {
+  border-bottom-color: hsl(180, 100%, 50%);
+}
+
+.dark_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(3n+3) .item-img,
+.dark_theme #blogs .portfolio-items>li.portfolio-item:nth-child(3n+3) .item-img {
+  border-bottom-color: hsl(330, 100%, 65%);
+}
+
+/* ============================================
+   PLAYFUL LIGHT THEME CARD EFFECTS
+   ============================================ */
+
+/* Colorful card borders in light theme */
+.light_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(3n+1),
+.light_theme #blogs .portfolio-items>li.portfolio-item:nth-child(3n+1) {
+  border-color: hsl(24, 100%, 50%);
+  box-shadow: 6px 6px 0 rgba(255, 107, 0, 0.25);
+}
+
+.light_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(3n+2),
+.light_theme #blogs .portfolio-items>li.portfolio-item:nth-child(3n+2) {
+  border-color: hsl(210, 100%, 50%);
+  box-shadow: 6px 6px 0 rgba(0, 150, 255, 0.25);
+}
+
+.light_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(3n+3),
+.light_theme #blogs .portfolio-items>li.portfolio-item:nth-child(3n+3) {
+  border-color: hsl(280, 100%, 60%);
+  box-shadow: 6px 6px 0 rgba(200, 100, 255, 0.25);
+}
+
+.light_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(3n+1):hover,
+.light_theme #blogs .portfolio-items>li.portfolio-item:nth-child(3n+1):hover {
+  box-shadow: 10px 10px 0 rgba(255, 107, 0, 0.3);
+}
+
+.light_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(3n+2):hover,
+.light_theme #blogs .portfolio-items>li.portfolio-item:nth-child(3n+2):hover {
+  box-shadow: 10px 10px 0 rgba(0, 150, 255, 0.3);
+}
+
+.light_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(3n+3):hover,
+.light_theme #blogs .portfolio-items>li.portfolio-item:nth-child(3n+3):hover {
+  box-shadow: 10px 10px 0 rgba(200, 100, 255, 0.3);
+}
+
+/* Colorful image borders in light theme */
+.light_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(3n+1) .item-img,
+.light_theme #blogs .portfolio-items>li.portfolio-item:nth-child(3n+1) .item-img {
+  border-bottom-color: hsl(24, 100%, 50%);
+}
+
+.light_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(3n+2) .item-img,
+.light_theme #blogs .portfolio-items>li.portfolio-item:nth-child(3n+2) .item-img {
+  border-bottom-color: hsl(210, 100%, 50%);
+}
+
+.light_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(3n+3) .item-img,
+.light_theme #blogs .portfolio-items>li.portfolio-item:nth-child(3n+3) .item-img {
+  border-bottom-color: hsl(280, 100%, 60%);
+}
+
+/* Theme-specific ribbon colors */
+.dark_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(3n+1) .category {
+  background: hsl(120, 100%, 50%);
+  border-color: hsl(120, 100%, 40%);
+}
+
+.dark_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(3n+2) .category {
+  background: hsl(180, 100%, 50%);
+  border-color: hsl(180, 100%, 40%);
+}
+
+.dark_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(3n+3) .category {
+  background: hsl(330, 100%, 65%);
+  border-color: hsl(330, 100%, 55%);
+}
+
+.light_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(3n+1) .category {
+  background: hsl(24, 100%, 50%);
+  border-color: hsl(24, 100%, 40%);
+}
+
+.light_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(3n+2) .category {
+  background: hsl(210, 100%, 50%);
+  border-color: hsl(210, 100%, 40%);
+}
+
+.light_theme .portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(3n+3) .category {
+  background: hsl(280, 100%, 60%);
+  border-color: hsl(280, 100%, 50%);
+}
+
+/* ============================================
+   STAGGERED ANIMATION ON LOAD
+   ============================================ */
+
+.portfolio-section .section-content .portfolio-items>li.portfolio-item,
+#blogs .portfolio-items>li.portfolio-item {
+  animation: cardSlideIn 0.4s ease-out forwards;
+  opacity: 1;
+}
+
+@keyframes cardSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add stagger delay for each card */
+.portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(1),
+#blogs .portfolio-items>li.portfolio-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(2),
+#blogs .portfolio-items>li.portfolio-item:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(3),
+#blogs .portfolio-items>li.portfolio-item:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(4),
+#blogs .portfolio-items>li.portfolio-item:nth-child(4) {
+  animation-delay: 0.25s;
+}
+
+.portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(5),
+#blogs .portfolio-items>li.portfolio-item:nth-child(5) {
+  animation-delay: 0.3s;
+}
+
+.portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(6),
+#blogs .portfolio-items>li.portfolio-item:nth-child(6) {
+  animation-delay: 0.35s;
+}
+
+.portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(7),
+#blogs .portfolio-items>li.portfolio-item:nth-child(7) {
+  animation-delay: 0.4s;
+}
+
+.portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(8),
+#blogs .portfolio-items>li.portfolio-item:nth-child(8) {
+  animation-delay: 0.45s;
+}
+
+.portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(9),
+#blogs .portfolio-items>li.portfolio-item:nth-child(9) {
+  animation-delay: 0.5s;
+}
+
+.portfolio-section .section-content .portfolio-items>li.portfolio-item:nth-child(n+10),
+#blogs .portfolio-items>li.portfolio-item:nth-child(n+10) {
+  animation-delay: 0.55s;
+}
+
+/* Ensure proper spacing and no masonry breaks */
+.portfolio-section .section-content .portfolio-items>li,
+#blogs .portfolio-items>li {
+  -webkit-column-break-inside: auto;
+  -moz-column-break-inside: auto;
+  break-inside: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .portfolio-section .section-content .portfolio-items>li .item-details {
+    padding: 20px;
+    gap: 12px;
+  }
+
+  .portfolio-section .section-content .portfolio-items>li .item-details .title {
+    font-size: 1.1rem !important;
+  }
+
+  .portfolio-section .section-content .portfolio-items>li .item-details .description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .portfolio-section .section-content .portfolio-items>li .item-details .tool-tag {
+    font-size: 0.65rem;
+    padding: 3px 8px;
+  }
+
+  .portfolio-section .section-content .portfolio-items>li .item-details .category {
+    top: 16px;
+    right: -2px;
+    padding: 6px 12px 6px 10px;
+    font-size: 0.65rem;
+  }
+
+  .portfolio-section .section-content .portfolio-items>li .item-details .title {
+    padding-right: 70px !important;
+  }
+}
