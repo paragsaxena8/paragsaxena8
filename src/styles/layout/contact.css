@@ -1,0 +1,142 @@
+.contact-section .section-content {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: -50px
+}
+
+.contact-section .section-content>* {
+  margin-bottom: 50px
+}
+
+.contact-section .section-content .contact-text .contact-info {
+  margin-top: 50px
+}
+
+.contact-section .section-content .contact-text .contact-info>li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  visibility: hidden
+}
+
+.contact-section .section-content .contact-text .contact-info>li:not(:last-of-type) {
+  margin-bottom: 20px
+}
+
+.contact-section .section-content .contact-text .contact-info>li img {
+  width: 24px;
+  -webkit-filter: var(--filter-invert-false);
+  filter: var(--filter-invert-false)
+}
+
+html[dir=ltr] .contact-section .section-content .contact-text .contact-info>li img {
+  margin-right: 18px
+}
+
+html[dir=rtl] .contact-section .section-content .contact-text .contact-info>li img {
+  margin-left: 18px
+}
+
+.contact-section .section-content .contact-text .contact-info>li div strong {
+  display: block;
+  margin-bottom: 5px
+}
+
+.contact-section .section-content .contact-text .contact-info>li div a:hover {
+  text-decoration: underline
+}
+
+.contact-section .section-content .contact-text .contact-info>li div a:focus {
+  outline: 0
+}
+
+.enable-focus-style .contact-section .section-content .contact-text .contact-info>li div a:focus {
+  -webkit-box-shadow: 0 0 0 3px hsla(var(--main-color-two), 70%);
+  box-shadow: 0 0 0 3px hsla(var(--main-color-two), 70%)
+}
+
+.contact-section .section-content .contact-text .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 30px -5px -10px
+}
+
+html[dir=ltr] .contact-section .section-content .contact-text .social {
+  padding-left: 42px
+}
+
+html[dir=rtl] .contact-section .section-content .contact-text .social {
+  padding-right: 42px
+}
+
+.contact-section .section-content .contact-text .social li {
+  visibility: hidden
+}
+
+.contact-section .section-content .contact-text .social li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  background-color: hsl(var(--bg-color-reverse));
+  color: hsl(var(--bg-color-one));
+  margin: 0 5px 10px;
+  border-radius: 50%
+}
+
+.contact-section .section-content .contact-text .social li a:hover {
+  background-color: hsl(var(--main-color-one));
+  color: hsl(var(--light-color))
+}
+
+.contact-section .section-content .contact-text .social li a:focus {
+  outline: 0
+}
+
+.enable-focus-style .contact-section .section-content .contact-text .social li a:focus {
+  -webkit-box-shadow: 0 0 0 3px hsla(var(--main-color-two), 70%);
+  box-shadow: 0 0 0 3px hsla(var(--main-color-two), 70%)
+}
+
+.contact-section .section-content .contact-form {
+  background-color: hsl(var(--bg-color-two));
+  padding: 25px;
+  margin: auto;
+  border-radius: .63rem;
+  -webkit-box-shadow: var(--card-shadow);
+  box-shadow: var(--card-shadow);
+  visibility: hidden
+}
+
+@media (min-width:768px) {
+  .contact-section .section-content .contact-form {
+    max-width: 450px
+  }
+}
+
+html[dir=rtl] .contact-section .section-content .contact-form .phone-number .fa {
+  -webkit-transform: rotateY(180deg) translateY(-50%);
+  transform: rotateY(180deg) translateY(-50%)
+}
+
+.contact-section .section-content .contact-form .submit-btn {
+  width: 100%
+}
+

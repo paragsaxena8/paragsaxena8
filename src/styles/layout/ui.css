@@ -1,0 +1,354 @@
+.circle-cursor {
+  position: fixed;
+  z-index: 99999999;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  visibility: hidden
+}
+
+.circle-cursor.circle-cursor-outer {
+  height: 30px;
+  width: 30px;
+  border: 1px solid hsl(var(--main-color-one));
+  opacity: .5;
+  -webkit-transition: all 80ms ease-out;
+  transition: all 80ms ease-out
+}
+
+.circle-cursor.circle-cursor-inner {
+  height: 6px;
+  width: 6px;
+  background-color: hsl(var(--main-color-one));
+  -webkit-transition: top 20ms ease-out, left 20ms ease-out, height .2s ease-in-out, width .2s ease-in-out, opacity .2s ease-in-out;
+  transition: top 20ms ease-out, left 20ms ease-out, height .2s ease-in-out, width .2s ease-in-out, opacity .2s ease-in-out
+}
+
+.circle-cursor.circle-cursor-inner.cursor-link-hover {
+  height: 20px;
+  width: 20px;
+  opacity: .5
+}
+
+.circle-cursor.circle-cursor-inner.cursor-click-effect {
+  height: 13px;
+  width: 13px
+}
+
+.preloader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  z-index: 4000;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: hsl(var(--bg-color-two))
+}
+
+.preloader .preloader-content {
+  margin: auto
+}
+
+.preloader .preloader-content .logo {
+  text-align: center;
+  margin-bottom: 25px
+}
+
+.preloader .preloader-content .logo svg {
+  width: 36px
+}
+
+.preloader .preloader-content .logo svg path {
+  fill: hsl(var(--bg-color-reverse))
+}
+
+.preloader .preloader-content .loading-bar {
+  height: 4px;
+  width: 180px;
+  background-color: hsl(var(--bg-color-one));
+  border-radius: 4px;
+  overflow: hidden
+}
+
+.preloader .preloader-content .loading-bar .loading-bar-progress {
+  display: block;
+  height: 100%;
+  width: var(--loading-percentage, 0%);
+  background-color: hsl(var(--bg-color-reverse))
+}
+
+.preloader~.hide-in-preloading {
+  visibility: hidden
+}
+
+
+.scroll-to-top {
+  position: fixed;
+  z-index: 1990;
+  bottom: 25px;
+  height: 46px;
+  width: 46px;
+  color: hsl(var(--primary-color));
+  font-size: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 0 2px hsla(var(--primary-color), 25%) inset;
+  box-shadow: 0 0 0 2px hsla(var(--primary-color), 25%) inset;
+  -webkit-transition: none;
+  transition: none;
+  visibility: hidden
+}
+
+html[dir=ltr] .scroll-to-top {
+  right: 25px
+}
+
+html[dir=rtl] .scroll-to-top {
+  left: 25px
+}
+
+.scroll-to-top svg path {
+  fill: none;
+  stroke: hsl(var(--primary-color));
+  stroke-width: 5
+}
+
+.scroll-to-top::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 40%;
+  width: 25%;
+  background-color: hsl(var(--primary-color));
+  -webkit-clip-path: polygon(0 30%, 50% 0, 100% 30%, 94% 39%, 58% 17%, 58% 100%, 42% 100%, 42% 17%, 6% 39%);
+  clip-path: polygon(0 30%, 50% 0, 100% 30%, 94% 39%, 58% 17%, 58% 100%, 42% 100%, 42% 17%, 6% 39%)
+}
+
+.scroll-to-top:focus {
+  outline: 0
+}
+
+.enable-focus-style .scroll-to-top:focus {
+  -webkit-box-shadow: 0 0 0 3px hsla(var(--main-color-two), 70%);
+  box-shadow: 0 0 0 3px hsla(var(--main-color-two), 70%)
+}
+
+.ajax-loading {
+  position: fixed;
+  z-index: 2000;
+  bottom: 20px;
+  background-color: hsl(var(--bg-color-two));
+  -webkit-box-shadow: var(--card-shadow);
+  box-shadow: var(--card-shadow);
+  padding: 3px;
+  border-radius: 50%
+}
+
+html[dir=ltr] .ajax-loading {
+  left: 20px
+}
+
+html[dir=rtl] .ajax-loading {
+  right: 20px
+}
+
+.ajax-loading span {
+  display: block;
+  height: 29px;
+  width: 29px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: transparent hsl(var(--main-color-one));
+  border-radius: 50%
+}
+
+html[dir=ltr] .ajax-loading span {
+  -webkit-animation: spinner-left .6s linear infinite;
+  animation: spinner-left .6s linear infinite
+}
+
+html[dir=rtl] .ajax-loading span {
+  -webkit-animation: spinner-right .6s linear infinite;
+  animation: spinner-right .6s linear infinite
+}
+
+@-webkit-keyframes timer {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+@keyframes timer {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+
+.notifications-container {
+  position: fixed;
+  z-index: 3000;
+  bottom: 25px
+}
+
+html[dir=ltr] .notifications-container {
+  right: 80px
+}
+
+html[dir=rtl] .notifications-container {
+  left: 80px
+}
+
+@media (max-width:576px) {
+  .notifications-container {
+    width: calc(100% - 30px);
+    max-width: 250px
+  }
+}
+
+.notifications-container .notification {
+  position: relative;
+  line-height: 1.5;
+  color: #fff
+}
+
+html[dir=ltr] .notifications-container .notification {
+  padding: 10px 28px 10px 14px
+}
+
+html[dir=rtl] .notifications-container .notification {
+  padding: 10px 14px 10px 28px
+}
+
+@media (min-width:577px) {
+  .notifications-container .notification {
+    width: 250px
+  }
+}
+
+@media (max-width:767px) {
+  .notifications-container .notification {
+    width: 100%
+  }
+}
+
+.notifications-container .notification.timer .disappearing-time {
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  height: 3px;
+  background-color: inherit;
+  opacity: .6;
+  -webkit-animation-name: timer;
+  animation-name: timer;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both
+}
+
+html[dir=ltr] .notifications-container .notification.timer .disappearing-time {
+  left: 0
+}
+
+html[dir=rtl] .notifications-container .notification.timer .disappearing-time {
+  right: 0
+}
+
+.notifications-container .notification.success {
+  background-color: hsl(var(--success-color))
+}
+
+.notifications-container .notification.danger {
+  background-color: hsl(var(--danger-color))
+}
+
+.notifications-container .notification.warning {
+  background-color: hsl(var(--warning-color));
+  color: hsl(var(--dark-color))
+}
+
+.notifications-container .notification.info {
+  background-color: hsl(var(--info-color))
+}
+
+.notifications-container .notification:not(:last-of-type) {
+  margin-bottom: 10px
+}
+
+.notifications-container .notification .fa {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: pointer;
+  opacity: .7;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out
+}
+
+html[dir=ltr] .notifications-container .notification .fa {
+  right: 12px
+}
+
+html[dir=rtl] .notifications-container .notification .fa {
+  left: 12px
+}
+
+.notifications-container .notification .fa:hover {
+  opacity: 1
+}
+
+.notifications-container .notify-enter-active {
+  -webkit-animation: .3s ease-in-out;
+  animation: .3s ease-in-out
+}
+
+html[dir=ltr] .notifications-container .notify-enter-active {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft
+}
+
+html[dir=rtl] .notifications-container .notify-enter-active {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight
+}
+
+.notifications-container .notify-leave-active {
+  animation: .3s ease-in-out reverse
+}
+
+html[dir=ltr] .notifications-container .notify-leave-active {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft
+}
+
+html[dir=rtl] .notifications-container .notify-leave-active {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight
+}
+
+.notifications-container .notify-move {
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out
+}

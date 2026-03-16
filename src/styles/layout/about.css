@@ -1,0 +1,108 @@
+.about-section .section-content {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: -50px
+}
+
+.about-section .section-content>* {
+  margin-bottom: 50px
+}
+
+.about-section .section-content .about-img {
+  position: relative;
+  visibility: hidden
+}
+
+@media (min-width:992px) {
+  .about-section .section-content .about-img {
+    height: 500px
+  }
+}
+
+@media (max-width:991px) {
+  .about-section .section-content .about-img {
+    height: 400px
+  }
+}
+
+.about-section .section-content .about-img .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%
+}
+
+.about-section .section-content .about-img .layer:first-of-type {
+  height: 100%;
+  -webkit-mask-image: url(../../assets/images/blob-shape.png);
+  mask-image: url(../../assets/images/blob-shape.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: bottom;
+  mask-position: bottom;
+  -webkit-mask-size: contain;
+  mask-size: contain
+}
+
+.about-section .section-content .about-img .layer:first-of-type:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  height: 80%;
+  width: 80%;
+  background: linear-gradient(150deg, hsl(var(--main-color-one)) 0, hsl(var(--main-color-two)) 100%);
+  -webkit-mask-image: url(../../assets/images/blob-shape.png);
+  mask-image: url(../../assets/images/blob-shape.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: bottom;
+  mask-position: bottom;
+  -webkit-mask-size: contain;
+  mask-size: contain
+}
+
+html[dir=ltr] .about-section .section-content .about-img .layer:first-of-type:before {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%)
+}
+
+html[dir=rtl] .about-section .section-content .about-img .layer:first-of-type:before {
+  right: 50%;
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%)
+}
+
+.about-section .section-content .about-img .layer:first-of-type img {
+  height: 100%;
+  -webkit-filter: drop-shadow(2px 4px 6px #000);
+  filter: drop-shadow(2px 4px 6px #000)
+}
+
+.about-section .section-content .about-img .layer:last-of-type {
+  height: 50%;
+  overflow: hidden
+}
+
+.about-section .section-content .about-img .layer:last-of-type img {
+  height: 200%
+}
+
+.about-section .section-content .about-img .layer img {
+  position: relative;
+  z-index: 2;
+  display: block;
+  max-width: 100%;
+  margin: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+.about-section .section-content .about-text p {
+  margin: 0
+}
+
