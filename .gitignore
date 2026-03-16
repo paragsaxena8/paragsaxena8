@@ -1,1 +1,5 @@
 .vscode/
+.vite/
+dist/
+node_modules/
+*.log
